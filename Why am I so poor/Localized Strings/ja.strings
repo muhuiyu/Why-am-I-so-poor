@@ -1,0 +1,36 @@
+/* 
+  ja.strings
+  Fastiee
+
+  Created by Mu Yu on 6/25/22.
+  
+*/
+
+// MARK: - Generic
+"AppName" = "Fastiee";
+"Login" = "ログイン";
+"Logout" = "ログアウト";
+
+// MARK: - Main Tab Bar
+"MainTab.Home" = "ホーム";
+"MainTab.Budget" = "予算";
+"MainTab.Me" = "Me";
+
+// MARK: - Loading Screen
+"Loading.Title" = "Loading...";
+
+// MARK: - Language
+"Language.Title" = "言語";
+"Language.en" = "英語";
+"Language.ja" = "日本語";
+"Language.vi" = "ベトナム語";
+"Language.changeLanguage" = "言語を変更する";
+
+// MARK: - Transaction Detail
+"TransactionList.RecentTransactions" = "最近のご利用";
+"TransactionList.SeeAll" = "全てを見る";
+"TransactionDetail.Note" = "メッセージ";
+"TransactionDetail.AddNote" = "メモを追加";
+"TransactionDetail.Category" = "カテゴリー";
+"TransactionDetail.PaymentBy" = "Payment By";
+"TransactionDetail.ExpenseTag" = "タグ";

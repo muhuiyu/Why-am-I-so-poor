@@ -9,21 +9,153 @@
 /* Begin PBXBuildFile section */
 		E4B97459287169E40035A97B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B97458287169E40035A97B /* AppDelegate.swift */; };
 		E4B9745B287169E40035A97B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B9745A287169E40035A97B /* SceneDelegate.swift */; };
-		E4B9745D287169E40035A97B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B9745C287169E40035A97B /* ViewController.swift */; };
-		E4B97460287169E40035A97B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4B9745E287169E40035A97B /* Main.storyboard */; };
 		E4B97462287169E50035A97B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4B97461287169E50035A97B /* Assets.xcassets */; };
 		E4B97465287169E50035A97B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4B97463287169E50035A97B /* LaunchScreen.storyboard */; };
+		E4B9746F28716AA60035A97B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B9746D28716AA60035A97B /* AppCoordinator.swift */; };
+		E4B9747028716AA60035A97B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B9746E28716AA60035A97B /* Coordinator.swift */; };
+		E4B9747328716AB50035A97B /* MeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B9747128716AB40035A97B /* MeCoordinator.swift */; };
+		E4B9747428716AB50035A97B /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B9747228716AB40035A97B /* HomeCoordinator.swift */; };
+		E4B9749528716AC50035A97B /* IconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B9747828716AC50035A97B /* IconButton.swift */; };
+		E4B9749628716AC50035A97B /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B9747928716AC50035A97B /* RoundButton.swift */; };
+		E4B9749728716AC50035A97B /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B9747A28716AC50035A97B /* CircleView.swift */; };
+		E4B9749828716AC50035A97B /* TextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B9747B28716AC50035A97B /* TextButton.swift */; };
+		E4B9749928716AC50035A97B /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B9747D28716AC50035A97B /* ProgressBarView.swift */; };
+		E4B9749A28716AC50035A97B /* SpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B9747E28716AC50035A97B /* SpinnerView.swift */; };
+		E4B9749B28716AC50035A97B /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B9748028716AC50035A97B /* CacheManager.swift */; };
+		E4B9749C28716AC50035A97B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B9748228716AC50035A97B /* Constants.swift */; };
+		E4B9749D28716AC50035A97B /* UIColor+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B9748328716AC50035A97B /* UIColor+Theme.swift */; };
+		E4B9749E28716AC50035A97B /* UIFont+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B9748428716AC50035A97B /* UIFont+Theme.swift */; };
+		E4B9749F28716AC50035A97B /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B9748528716AC50035A97B /* Enum.swift */; };
+		E4B974A028716AC50035A97B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B9748728716AC50035A97B /* ViewController.swift */; };
+		E4B974A128716AC50035A97B /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B9748828716AC50035A97B /* UIViewController+Extensions.swift */; };
+		E4B974A228716AC50035A97B /* UIImageView+loadImageUsingURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B9748928716AC50035A97B /* UIImageView+loadImageUsingURL.swift */; };
+		E4B974A328716AC50035A97B /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B9748A28716AC50035A97B /* UIView+Extensions.swift */; };
+		E4B974A428716AC50035A97B /* DateFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B9748B28716AC50035A97B /* DateFormatter+Extensions.swift */; };
+		E4B974A528716AC50035A97B /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B9748C28716AC50035A97B /* String+Extensions.swift */; };
+		E4B974A628716AC50035A97B /* Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B9748D28716AC50035A97B /* Localized.swift */; };
+		E4B974A728716AC50035A97B /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B9748E28716AC50035A97B /* UIColor+Extensions.swift */; };
+		E4B974A828716AC50035A97B /* Decimal+formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B9748F28716AC50035A97B /* Decimal+formatter.swift */; };
+		E4B974A928716AC50035A97B /* UIStack+RemoveAll.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B9749028716AC50035A97B /* UIStack+RemoveAll.swift */; };
+		E4B974AA28716AC50035A97B /* TimeInterval+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B9749128716AC50035A97B /* TimeInterval+Extensions.swift */; };
+		E4B974AB28716AC50035A97B /* UILabel+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B9749228716AC50035A97B /* UILabel+Extensions.swift */; };
+		E4B974AC28716AC50035A97B /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B9749328716AC50035A97B /* Date+Extensions.swift */; };
+		E4B974AD28716AC50035A97B /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B9749428716AC50035A97B /* Double+Extensions.swift */; };
+		E4B974B028716AF10035A97B /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = E4B974AF28716AF10035A97B /* RxCocoa */; };
+		E4B974B228716AF10035A97B /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = E4B974B128716AF10035A97B /* RxRelay */; };
+		E4B974B428716AF10035A97B /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E4B974B328716AF10035A97B /* RxSwift */; };
+		E4B974B728716B000035A97B /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = E4B974B628716B000035A97B /* SnapKit */; };
+		E4B974C728716B6F0035A97B /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B974BA28716B6F0035A97B /* MeViewController.swift */; };
+		E4B974C828716B6F0035A97B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B974BB28716B6F0035A97B /* BaseViewController.swift */; };
+		E4B974C928716B6F0035A97B /* LoadingScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B974BC28716B6F0035A97B /* LoadingScreenViewController.swift */; };
+		E4B974CA28716B6F0035A97B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B974BD28716B6F0035A97B /* HomeViewController.swift */; };
+		E4B974CB28716B6F0035A97B /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B974BE28716B6F0035A97B /* MainTabBarController.swift */; };
+		E4B974D028716B6F0035A97B /* InfoTextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B974C628716B6F0035A97B /* InfoTextButton.swift */; };
+		E4B974D528716B8A0035A97B /* en.strings in Resources */ = {isa = PBXBuildFile; fileRef = E4B974D228716B8A0035A97B /* en.strings */; };
+		E4B974D628716B8A0035A97B /* ja.strings in Resources */ = {isa = PBXBuildFile; fileRef = E4B974D328716B8A0035A97B /* ja.strings */; };
+		E4B974D728716B8A0035A97B /* vi.strings in Resources */ = {isa = PBXBuildFile; fileRef = E4B974D428716B8A0035A97B /* vi.strings */; };
+		E4B974DF28716BA90035A97B /* AppTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B974DB28716BA90035A97B /* AppTime.swift */; };
+		E4B974E628716BAD0035A97B /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B974E328716BAD0035A97B /* HomeViewModel.swift */; };
+		E4B974E728716BAD0035A97B /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B974E428716BAD0035A97B /* BaseViewModel.swift */; };
+		E4B974E828716BAD0035A97B /* LoadingScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B974E528716BAD0035A97B /* LoadingScreenViewModel.swift */; };
+		E4B974EA28716BBD0035A97B /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B974E928716BBD0035A97B /* Transaction.swift */; };
+		E4B974EF2871701D0035A97B /* TransactionListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B974EE2871701D0035A97B /* TransactionListViewModel.swift */; };
+		E4B974F2287170720035A97B /* Collections in Frameworks */ = {isa = PBXBuildFile; productRef = E4B974F1287170720035A97B /* Collections */; };
+		E4B974F4287170720035A97B /* DequeModule in Frameworks */ = {isa = PBXBuildFile; productRef = E4B974F3287170720035A97B /* DequeModule */; };
+		E4B974F6287170720035A97B /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = E4B974F5287170720035A97B /* OrderedCollections */; };
+		E4B974F9287173440035A97B /* TransactionPreviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B974F8287173440035A97B /* TransactionPreviewCell.swift */; };
+		E4B974FC28719A8B0035A97B /* RxDataSources in Frameworks */ = {isa = PBXBuildFile; productRef = E4B974FB28719A8B0035A97B /* RxDataSources */; };
+		E4B974FF28719CCC0035A97B /* TransactionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B974FE28719CCC0035A97B /* TransactionDataSource.swift */; };
+		E4B9750128719D010035A97B /* TransactionSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B9750028719D010035A97B /* TransactionSection.swift */; };
+		E4B9750328719DAF0035A97B /* TransactionCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B9750228719DAF0035A97B /* TransactionCellViewModel.swift */; };
+		E4B975052871ACFC0035A97B /* TransactionListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B975042871ACFC0035A97B /* TransactionListHeaderView.swift */; };
+		E4B975072871D4010035A97B /* BudgetCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B975062871D4010035A97B /* BudgetCoordinator.swift */; };
+		E4B975092871D40F0035A97B /* BudgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B975082871D40F0035A97B /* BudgetViewController.swift */; };
+		E4B9750B2871D4380035A97B /* BudgetListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B9750A2871D4380035A97B /* BudgetListViewModel.swift */; };
+		E4B9750D2871D4B30035A97B /* Budget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B9750C2871D4B30035A97B /* Budget.swift */; };
+		E4B9750F2871D5B30035A97B /* BudgetDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B9750E2871D5B30035A97B /* BudgetDataSource.swift */; };
+		E4B975112871D5BA0035A97B /* BudgetSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B975102871D5BA0035A97B /* BudgetSection.swift */; };
+		E4B975142871D67E0035A97B /* BudgetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B975132871D67E0035A97B /* BudgetCell.swift */; };
+		E4B975162871D69B0035A97B /* BudgetCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B975152871D69B0035A97B /* BudgetCellViewModel.swift */; };
+		E4B975182871D9820035A97B /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B975172871D9820035A97B /* Category.swift */; };
+		E4B9751A2871DF4C0035A97B /* TransactionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B975192871DF4C0035A97B /* TransactionDetailViewController.swift */; };
+		E4B9751C2871DFB00035A97B /* TransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B9751B2871DFB00035A97B /* TransactionViewModel.swift */; };
+		E4B975202871E1D00035A97B /* TransactionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B9751F2871E1D00035A97B /* TransactionListViewController.swift */; };
+		E4B9752228725EEC0035A97B /* UINavigationController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B9752128725EEC0035A97B /* UINavigationController+Extensions.swift */; };
+		E4B97524287281A90035A97B /* TransactionDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B97523287281A90035A97B /* TransactionDetailCell.swift */; };
+		E4B975262872900A0035A97B /* TransactionEditTextPropertyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B975252872900A0035A97B /* TransactionEditTextPropertyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E4B97455287169E40035A97B /* Why am I so poor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Why am I so poor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4B97458287169E40035A97B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E4B9745A287169E40035A97B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E4B9745C287169E40035A97B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E4B9745F287169E40035A97B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E4B97461287169E50035A97B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4B97464287169E50035A97B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E4B97466287169E50035A97B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4B9746D28716AA60035A97B /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		E4B9746E28716AA60035A97B /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		E4B9747128716AB40035A97B /* MeCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeCoordinator.swift; sourceTree = "<group>"; };
+		E4B9747228716AB40035A97B /* HomeCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		E4B9747828716AC50035A97B /* IconButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconButton.swift; sourceTree = "<group>"; };
+		E4B9747928716AC50035A97B /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		E4B9747A28716AC50035A97B /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		E4B9747B28716AC50035A97B /* TextButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextButton.swift; sourceTree = "<group>"; };
+		E4B9747D28716AC50035A97B /* ProgressBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
+		E4B9747E28716AC50035A97B /* SpinnerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpinnerView.swift; sourceTree = "<group>"; };
+		E4B9748028716AC50035A97B /* CacheManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
+		E4B9748228716AC50035A97B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E4B9748328716AC50035A97B /* UIColor+Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Theme.swift"; sourceTree = "<group>"; };
+		E4B9748428716AC50035A97B /* UIFont+Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Theme.swift"; sourceTree = "<group>"; };
+		E4B9748528716AC50035A97B /* Enum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
+		E4B9748728716AC50035A97B /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E4B9748828716AC50035A97B /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		E4B9748928716AC50035A97B /* UIImageView+loadImageUsingURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+loadImageUsingURL.swift"; sourceTree = "<group>"; };
+		E4B9748A28716AC50035A97B /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		E4B9748B28716AC50035A97B /* DateFormatter+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extensions.swift"; sourceTree = "<group>"; };
+		E4B9748C28716AC50035A97B /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		E4B9748D28716AC50035A97B /* Localized.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localized.swift; sourceTree = "<group>"; };
+		E4B9748E28716AC50035A97B /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		E4B9748F28716AC50035A97B /* Decimal+formatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Decimal+formatter.swift"; sourceTree = "<group>"; };
+		E4B9749028716AC50035A97B /* UIStack+RemoveAll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStack+RemoveAll.swift"; sourceTree = "<group>"; };
+		E4B9749128716AC50035A97B /* TimeInterval+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Extensions.swift"; sourceTree = "<group>"; };
+		E4B9749228716AC50035A97B /* UILabel+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Extensions.swift"; sourceTree = "<group>"; };
+		E4B9749328716AC50035A97B /* Date+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		E4B9749428716AC50035A97B /* Double+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
+		E4B974BA28716B6F0035A97B /* MeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
+		E4B974BB28716B6F0035A97B /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		E4B974BC28716B6F0035A97B /* LoadingScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingScreenViewController.swift; sourceTree = "<group>"; };
+		E4B974BD28716B6F0035A97B /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		E4B974BE28716B6F0035A97B /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		E4B974C628716B6F0035A97B /* InfoTextButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoTextButton.swift; sourceTree = "<group>"; };
+		E4B974D228716B8A0035A97B /* en.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = en.strings; sourceTree = "<group>"; };
+		E4B974D328716B8A0035A97B /* ja.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = ja.strings; sourceTree = "<group>"; };
+		E4B974D428716B8A0035A97B /* vi.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = vi.strings; sourceTree = "<group>"; };
+		E4B974DB28716BA90035A97B /* AppTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTime.swift; sourceTree = "<group>"; };
+		E4B974E328716BAD0035A97B /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		E4B974E428716BAD0035A97B /* BaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		E4B974E528716BAD0035A97B /* LoadingScreenViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingScreenViewModel.swift; sourceTree = "<group>"; };
+		E4B974E928716BBD0035A97B /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		E4B974EE2871701D0035A97B /* TransactionListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListViewModel.swift; sourceTree = "<group>"; };
+		E4B974F8287173440035A97B /* TransactionPreviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionPreviewCell.swift; sourceTree = "<group>"; };
+		E4B974FE28719CCC0035A97B /* TransactionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDataSource.swift; sourceTree = "<group>"; };
+		E4B9750028719D010035A97B /* TransactionSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionSection.swift; sourceTree = "<group>"; };
+		E4B9750228719DAF0035A97B /* TransactionCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCellViewModel.swift; sourceTree = "<group>"; };
+		E4B975042871ACFC0035A97B /* TransactionListHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListHeaderView.swift; sourceTree = "<group>"; };
+		E4B975062871D4010035A97B /* BudgetCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetCoordinator.swift; sourceTree = "<group>"; };
+		E4B975082871D40F0035A97B /* BudgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetViewController.swift; sourceTree = "<group>"; };
+		E4B9750A2871D4380035A97B /* BudgetListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetListViewModel.swift; sourceTree = "<group>"; };
+		E4B9750C2871D4B30035A97B /* Budget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Budget.swift; sourceTree = "<group>"; };
+		E4B9750E2871D5B30035A97B /* BudgetDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetDataSource.swift; sourceTree = "<group>"; };
+		E4B975102871D5BA0035A97B /* BudgetSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetSection.swift; sourceTree = "<group>"; };
+		E4B975132871D67E0035A97B /* BudgetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetCell.swift; sourceTree = "<group>"; };
+		E4B975152871D69B0035A97B /* BudgetCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetCellViewModel.swift; sourceTree = "<group>"; };
+		E4B975172871D9820035A97B /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		E4B975192871DF4C0035A97B /* TransactionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailViewController.swift; sourceTree = "<group>"; };
+		E4B9751B2871DFB00035A97B /* TransactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewModel.swift; sourceTree = "<group>"; };
+		E4B9751F2871E1D00035A97B /* TransactionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListViewController.swift; sourceTree = "<group>"; };
+		E4B9752128725EEC0035A97B /* UINavigationController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extensions.swift"; sourceTree = "<group>"; };
+		E4B97523287281A90035A97B /* TransactionDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailCell.swift; sourceTree = "<group>"; };
+		E4B975252872900A0035A97B /* TransactionEditTextPropertyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionEditTextPropertyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +163,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4B974F2287170720035A97B /* Collections in Frameworks */,
+				E4B974B428716AF10035A97B /* RxSwift in Frameworks */,
+				E4B974B728716B000035A97B /* SnapKit in Frameworks */,
+				E4B974F4287170720035A97B /* DequeModule in Frameworks */,
+				E4B974B228716AF10035A97B /* RxRelay in Frameworks */,
+				E4B974FC28719A8B0035A97B /* RxDataSources in Frameworks */,
+				E4B974F6287170720035A97B /* OrderedCollections in Frameworks */,
+				E4B974B028716AF10035A97B /* RxCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,13 +198,235 @@
 			children = (
 				E4B97458287169E40035A97B /* AppDelegate.swift */,
 				E4B9745A287169E40035A97B /* SceneDelegate.swift */,
-				E4B9745C287169E40035A97B /* ViewController.swift */,
-				E4B9745E287169E40035A97B /* Main.storyboard */,
+				E4B9746C28716A940035A97B /* Navigations */,
+				E4B974FD28719CB80035A97B /* Data Source */,
+				E4B974D928716BA90035A97B /* Models */,
+				E4B974E228716BAD0035A97B /* View Models */,
+				E4B974B828716B6F0035A97B /* Views */,
+				E4B974D128716B8A0035A97B /* Localized Strings */,
+				E4B9747528716AC50035A97B /* Supporting Files */,
 				E4B97461287169E50035A97B /* Assets.xcassets */,
 				E4B97463287169E50035A97B /* LaunchScreen.storyboard */,
 				E4B97466287169E50035A97B /* Info.plist */,
 			);
 			path = "Why am I so poor";
+			sourceTree = "<group>";
+		};
+		E4B9746C28716A940035A97B /* Navigations */ = {
+			isa = PBXGroup;
+			children = (
+				E4B9746E28716AA60035A97B /* Coordinator.swift */,
+				E4B9746D28716AA60035A97B /* AppCoordinator.swift */,
+				E4B9747228716AB40035A97B /* HomeCoordinator.swift */,
+				E4B975062871D4010035A97B /* BudgetCoordinator.swift */,
+				E4B9747128716AB40035A97B /* MeCoordinator.swift */,
+			);
+			path = Navigations;
+			sourceTree = "<group>";
+		};
+		E4B9747528716AC50035A97B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E4B9747628716AC50035A97B /* Subclasses */,
+				E4B9747F28716AC50035A97B /* Managers */,
+				E4B9748128716AC50035A97B /* Common */,
+				E4B9748628716AC50035A97B /* Helpers */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E4B9747628716AC50035A97B /* Subclasses */ = {
+			isa = PBXGroup;
+			children = (
+				E4B9747728716AC50035A97B /* Buttons */,
+				E4B9747C28716AC50035A97B /* Views */,
+			);
+			path = Subclasses;
+			sourceTree = "<group>";
+		};
+		E4B9747728716AC50035A97B /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				E4B9747828716AC50035A97B /* IconButton.swift */,
+				E4B9747928716AC50035A97B /* RoundButton.swift */,
+				E4B9747A28716AC50035A97B /* CircleView.swift */,
+				E4B9747B28716AC50035A97B /* TextButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		E4B9747C28716AC50035A97B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E4B9747D28716AC50035A97B /* ProgressBarView.swift */,
+				E4B9747E28716AC50035A97B /* SpinnerView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E4B9747F28716AC50035A97B /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				E4B9748028716AC50035A97B /* CacheManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		E4B9748128716AC50035A97B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				E4B9748228716AC50035A97B /* Constants.swift */,
+				E4B9748328716AC50035A97B /* UIColor+Theme.swift */,
+				E4B9748428716AC50035A97B /* UIFont+Theme.swift */,
+				E4B9748528716AC50035A97B /* Enum.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		E4B9748628716AC50035A97B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E4B9748728716AC50035A97B /* ViewController.swift */,
+				E4B9748828716AC50035A97B /* UIViewController+Extensions.swift */,
+				E4B9748928716AC50035A97B /* UIImageView+loadImageUsingURL.swift */,
+				E4B9748A28716AC50035A97B /* UIView+Extensions.swift */,
+				E4B9748B28716AC50035A97B /* DateFormatter+Extensions.swift */,
+				E4B9748C28716AC50035A97B /* String+Extensions.swift */,
+				E4B9748D28716AC50035A97B /* Localized.swift */,
+				E4B9748E28716AC50035A97B /* UIColor+Extensions.swift */,
+				E4B9748F28716AC50035A97B /* Decimal+formatter.swift */,
+				E4B9749028716AC50035A97B /* UIStack+RemoveAll.swift */,
+				E4B9749128716AC50035A97B /* TimeInterval+Extensions.swift */,
+				E4B9749228716AC50035A97B /* UILabel+Extensions.swift */,
+				E4B9749328716AC50035A97B /* Date+Extensions.swift */,
+				E4B9749428716AC50035A97B /* Double+Extensions.swift */,
+				E4B9752128725EEC0035A97B /* UINavigationController+Extensions.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		E4B974B828716B6F0035A97B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E4B974BF28716B6F0035A97B /* Views */,
+				E4B974B928716B6F0035A97B /* Controllers */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E4B974B928716B6F0035A97B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E4B974BB28716B6F0035A97B /* BaseViewController.swift */,
+				E4B974BE28716B6F0035A97B /* MainTabBarController.swift */,
+				E4B974BC28716B6F0035A97B /* LoadingScreenViewController.swift */,
+				E4B974BD28716B6F0035A97B /* HomeViewController.swift */,
+				E4B975192871DF4C0035A97B /* TransactionDetailViewController.swift */,
+				E4B975252872900A0035A97B /* TransactionEditTextPropertyViewController.swift */,
+				E4B9751F2871E1D00035A97B /* TransactionListViewController.swift */,
+				E4B975082871D40F0035A97B /* BudgetViewController.swift */,
+				E4B974BA28716B6F0035A97B /* MeViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E4B974BF28716B6F0035A97B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E4B974F7287173370035A97B /* Home */,
+				E4B975122871D6730035A97B /* Budget */,
+				E4B974C528716B6F0035A97B /* Common */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E4B974C528716B6F0035A97B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				E4B974C628716B6F0035A97B /* InfoTextButton.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		E4B974D128716B8A0035A97B /* Localized Strings */ = {
+			isa = PBXGroup;
+			children = (
+				E4B974D228716B8A0035A97B /* en.strings */,
+				E4B974D328716B8A0035A97B /* ja.strings */,
+				E4B974D428716B8A0035A97B /* vi.strings */,
+			);
+			path = "Localized Strings";
+			sourceTree = "<group>";
+		};
+		E4B974D928716BA90035A97B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E4B974DB28716BA90035A97B /* AppTime.swift */,
+				E4B975172871D9820035A97B /* Category.swift */,
+				E4B974E928716BBD0035A97B /* Transaction.swift */,
+				E4B9750C2871D4B30035A97B /* Budget.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E4B974E228716BAD0035A97B /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				E4B9751D2871DFBA0035A97B /* Transaction */,
+				E4B9751E2871DFC80035A97B /* Budget */,
+				E4B974E428716BAD0035A97B /* BaseViewModel.swift */,
+				E4B974E328716BAD0035A97B /* HomeViewModel.swift */,
+				E4B974E528716BAD0035A97B /* LoadingScreenViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		E4B974F7287173370035A97B /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				E4B974F8287173440035A97B /* TransactionPreviewCell.swift */,
+				E4B975042871ACFC0035A97B /* TransactionListHeaderView.swift */,
+				E4B97523287281A90035A97B /* TransactionDetailCell.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		E4B974FD28719CB80035A97B /* Data Source */ = {
+			isa = PBXGroup;
+			children = (
+				E4B974FE28719CCC0035A97B /* TransactionDataSource.swift */,
+				E4B9750028719D010035A97B /* TransactionSection.swift */,
+				E4B9750E2871D5B30035A97B /* BudgetDataSource.swift */,
+				E4B975102871D5BA0035A97B /* BudgetSection.swift */,
+			);
+			path = "Data Source";
+			sourceTree = "<group>";
+		};
+		E4B975122871D6730035A97B /* Budget */ = {
+			isa = PBXGroup;
+			children = (
+				E4B975132871D67E0035A97B /* BudgetCell.swift */,
+			);
+			path = Budget;
+			sourceTree = "<group>";
+		};
+		E4B9751D2871DFBA0035A97B /* Transaction */ = {
+			isa = PBXGroup;
+			children = (
+				E4B974EE2871701D0035A97B /* TransactionListViewModel.swift */,
+				E4B9750228719DAF0035A97B /* TransactionCellViewModel.swift */,
+				E4B9751B2871DFB00035A97B /* TransactionViewModel.swift */,
+			);
+			path = Transaction;
+			sourceTree = "<group>";
+		};
+		E4B9751E2871DFC80035A97B /* Budget */ = {
+			isa = PBXGroup;
+			children = (
+				E4B9750A2871D4380035A97B /* BudgetListViewModel.swift */,
+				E4B975152871D69B0035A97B /* BudgetCellViewModel.swift */,
+			);
+			path = Budget;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +445,16 @@
 			dependencies = (
 			);
 			name = "Why am I so poor";
+			packageProductDependencies = (
+				E4B974AF28716AF10035A97B /* RxCocoa */,
+				E4B974B128716AF10035A97B /* RxRelay */,
+				E4B974B328716AF10035A97B /* RxSwift */,
+				E4B974B628716B000035A97B /* SnapKit */,
+				E4B974F1287170720035A97B /* Collections */,
+				E4B974F3287170720035A97B /* DequeModule */,
+				E4B974F5287170720035A97B /* OrderedCollections */,
+				E4B974FB28719A8B0035A97B /* RxDataSources */,
+			);
 			productName = "Why am I so poor";
 			productReference = E4B97455287169E40035A97B /* Why am I so poor.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +483,12 @@
 				Base,
 			);
 			mainGroup = E4B9744C287169E40035A97B;
+			packageReferences = (
+				E4B974AE28716AF10035A97B /* XCRemoteSwiftPackageReference "RxSwift" */,
+				E4B974B528716B000035A97B /* XCRemoteSwiftPackageReference "SnapKit" */,
+				E4B974F0287170720035A97B /* XCRemoteSwiftPackageReference "swift-collections" */,
+				E4B974FA28719A8B0035A97B /* XCRemoteSwiftPackageReference "RxDataSources" */,
+			);
 			productRefGroup = E4B97456287169E40035A97B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,9 +503,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4B974D528716B8A0035A97B /* en.strings in Resources */,
+				E4B974D628716B8A0035A97B /* ja.strings in Resources */,
+				E4B974D728716B8A0035A97B /* vi.strings in Resources */,
 				E4B97465287169E50035A97B /* LaunchScreen.storyboard in Resources */,
 				E4B97462287169E50035A97B /* Assets.xcassets in Resources */,
-				E4B97460287169E40035A97B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +518,75 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4B9745D287169E40035A97B /* ViewController.swift in Sources */,
+				E4B975052871ACFC0035A97B /* TransactionListHeaderView.swift in Sources */,
+				E4B974A328716AC50035A97B /* UIView+Extensions.swift in Sources */,
+				E4B975182871D9820035A97B /* Category.swift in Sources */,
+				E4B974A628716AC50035A97B /* Localized.swift in Sources */,
+				E4B974CB28716B6F0035A97B /* MainTabBarController.swift in Sources */,
+				E4B975072871D4010035A97B /* BudgetCoordinator.swift in Sources */,
+				E4B974C828716B6F0035A97B /* BaseViewController.swift in Sources */,
+				E4B974C728716B6F0035A97B /* MeViewController.swift in Sources */,
+				E4B975092871D40F0035A97B /* BudgetViewController.swift in Sources */,
+				E4B975112871D5BA0035A97B /* BudgetSection.swift in Sources */,
+				E4B974E628716BAD0035A97B /* HomeViewModel.swift in Sources */,
+				E4B9749E28716AC50035A97B /* UIFont+Theme.swift in Sources */,
+				E4B974CA28716B6F0035A97B /* HomeViewController.swift in Sources */,
+				E4B974AA28716AC50035A97B /* TimeInterval+Extensions.swift in Sources */,
+				E4B9749D28716AC50035A97B /* UIColor+Theme.swift in Sources */,
+				E4B9749B28716AC50035A97B /* CacheManager.swift in Sources */,
+				E4B9750328719DAF0035A97B /* TransactionCellViewModel.swift in Sources */,
+				E4B974EF2871701D0035A97B /* TransactionListViewModel.swift in Sources */,
+				E4B9749728716AC50035A97B /* CircleView.swift in Sources */,
+				E4B974AD28716AC50035A97B /* Double+Extensions.swift in Sources */,
+				E4B975162871D69B0035A97B /* BudgetCellViewModel.swift in Sources */,
+				E4B9749628716AC50035A97B /* RoundButton.swift in Sources */,
+				E4B9751A2871DF4C0035A97B /* TransactionDetailViewController.swift in Sources */,
+				E4B97524287281A90035A97B /* TransactionDetailCell.swift in Sources */,
+				E4B9747028716AA60035A97B /* Coordinator.swift in Sources */,
+				E4B974A928716AC50035A97B /* UIStack+RemoveAll.swift in Sources */,
+				E4B974E828716BAD0035A97B /* LoadingScreenViewModel.swift in Sources */,
+				E4B974A128716AC50035A97B /* UIViewController+Extensions.swift in Sources */,
+				E4B9746F28716AA60035A97B /* AppCoordinator.swift in Sources */,
+				E4B9749528716AC50035A97B /* IconButton.swift in Sources */,
+				E4B974A728716AC50035A97B /* UIColor+Extensions.swift in Sources */,
+				E4B9750128719D010035A97B /* TransactionSection.swift in Sources */,
+				E4B9752228725EEC0035A97B /* UINavigationController+Extensions.swift in Sources */,
+				E4B975202871E1D00035A97B /* TransactionListViewController.swift in Sources */,
+				E4B974A228716AC50035A97B /* UIImageView+loadImageUsingURL.swift in Sources */,
+				E4B9749928716AC50035A97B /* ProgressBarView.swift in Sources */,
 				E4B97459287169E40035A97B /* AppDelegate.swift in Sources */,
+				E4B9749828716AC50035A97B /* TextButton.swift in Sources */,
+				E4B974EA28716BBD0035A97B /* Transaction.swift in Sources */,
 				E4B9745B287169E40035A97B /* SceneDelegate.swift in Sources */,
+				E4B974FF28719CCC0035A97B /* TransactionDataSource.swift in Sources */,
+				E4B974A028716AC50035A97B /* ViewController.swift in Sources */,
+				E4B974D028716B6F0035A97B /* InfoTextButton.swift in Sources */,
+				E4B974A828716AC50035A97B /* Decimal+formatter.swift in Sources */,
+				E4B974AB28716AC50035A97B /* UILabel+Extensions.swift in Sources */,
+				E4B9747328716AB50035A97B /* MeCoordinator.swift in Sources */,
+				E4B9750B2871D4380035A97B /* BudgetListViewModel.swift in Sources */,
+				E4B975262872900A0035A97B /* TransactionEditTextPropertyViewController.swift in Sources */,
+				E4B974AC28716AC50035A97B /* Date+Extensions.swift in Sources */,
+				E4B974F9287173440035A97B /* TransactionPreviewCell.swift in Sources */,
+				E4B9749F28716AC50035A97B /* Enum.swift in Sources */,
+				E4B974E728716BAD0035A97B /* BaseViewModel.swift in Sources */,
+				E4B975142871D67E0035A97B /* BudgetCell.swift in Sources */,
+				E4B9750F2871D5B30035A97B /* BudgetDataSource.swift in Sources */,
+				E4B9749C28716AC50035A97B /* Constants.swift in Sources */,
+				E4B974A528716AC50035A97B /* String+Extensions.swift in Sources */,
+				E4B9750D2871D4B30035A97B /* Budget.swift in Sources */,
+				E4B9749A28716AC50035A97B /* SpinnerView.swift in Sources */,
+				E4B974DF28716BA90035A97B /* AppTime.swift in Sources */,
+				E4B974A428716AC50035A97B /* DateFormatter+Extensions.swift in Sources */,
+				E4B9751C2871DFB00035A97B /* TransactionViewModel.swift in Sources */,
+				E4B9747428716AB50035A97B /* HomeCoordinator.swift in Sources */,
+				E4B974C928716B6F0035A97B /* LoadingScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		E4B9745E287169E40035A97B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E4B9745F287169E40035A97B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E4B97463287169E50035A97B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -292,7 +724,6 @@
 				INFOPLIST_FILE = "Why am I so poor/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -320,7 +751,6 @@
 				INFOPLIST_FILE = "Why am I so poor/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -358,6 +788,84 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E4B974AE28716AF10035A97B /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		E4B974B528716B000035A97B /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+		E4B974F0287170720035A97B /* XCRemoteSwiftPackageReference "swift-collections" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-collections.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		E4B974FA28719A8B0035A97B /* XCRemoteSwiftPackageReference "RxDataSources" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/RxDataSources";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E4B974AF28716AF10035A97B /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E4B974AE28716AF10035A97B /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		E4B974B128716AF10035A97B /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E4B974AE28716AF10035A97B /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		E4B974B328716AF10035A97B /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E4B974AE28716AF10035A97B /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		E4B974B628716B000035A97B /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E4B974B528716B000035A97B /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		E4B974F1287170720035A97B /* Collections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E4B974F0287170720035A97B /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = Collections;
+		};
+		E4B974F3287170720035A97B /* DequeModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E4B974F0287170720035A97B /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = DequeModule;
+		};
+		E4B974F5287170720035A97B /* OrderedCollections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E4B974F0287170720035A97B /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = OrderedCollections;
+		};
+		E4B974FB28719A8B0035A97B /* RxDataSources */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E4B974FA28719A8B0035A97B /* XCRemoteSwiftPackageReference "RxDataSources" */;
+			productName = RxDataSources;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E4B9744D287169E40035A97B /* Project object */;
 }

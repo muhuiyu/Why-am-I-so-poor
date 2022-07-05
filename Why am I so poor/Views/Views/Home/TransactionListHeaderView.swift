@@ -10,9 +10,7 @@ import UIKit
 class TransactionListHeaderView: UIView {
     
     private let titleLabel = UILabel()
-    private let moreButton = UIStackView()
     private let moreButtonLabel = UILabel()
-    private let moreButtonIcon = UIImageView()
     
     var tapHandler: (() -> Void)?
     
@@ -35,37 +33,25 @@ extension TransactionListHeaderView {
         addSubview(titleLabel)
         
         moreButtonLabel.textColor = UIColor.brand.primary
-        moreButtonLabel.textAlignment = .center
-        moreButtonLabel.font = UIFont.body
+        moreButtonLabel.textAlignment = .right
+        moreButtonLabel.font = UIFont.bodyHeavy
         moreButtonLabel.text = Localized.TransactionList.seeAll
-        moreButton.addArrangedSubview(moreButtonLabel)
-        
-        moreButtonIcon.tintColor = UIColor.brand.primary
-        moreButtonIcon.image = UIImage(systemName: "chevron.right")
-        moreButton.addArrangedSubview(moreButtonIcon)
-        
-        moreButton.isUserInteractionEnabled = true
-        moreButton.axis = .horizontal
-        moreButton.spacing = Constants.spacing.trivial
-        moreButton.alignment = .center
-        addSubview(moreButton)
+        addSubview(moreButtonLabel)
     }
     private func configureConstraints() {
         titleLabel.snp.remakeConstraints { make in
-            make.leading.top.bottom.equalTo(layoutMarginsGuide)
+            make.leading.equalToSuperview()
+            make.top.bottom.equalTo(layoutMarginsGuide)
         }
-        moreButtonIcon.snp.remakeConstraints { make in
-            make.size.equalTo(Constants.iconButtonSize.slight)
-        }
-        moreButton.snp.remakeConstraints { make in
+        moreButtonLabel.snp.remakeConstraints { make in
             make.leading.equalTo(titleLabel.snp.trailing)
             make.top.bottom.equalTo(titleLabel)
-            make.trailing.equalTo(layoutMarginsGuide)
+            make.trailing.equalToSuperview()
         }
     }
     private func configureGestures() {
         let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(didTapInView))
-        moreButton.addGestureRecognizer(tapRecognizer)
+        moreButtonLabel.addGestureRecognizer(tapRecognizer)
     }
 }
 // MARK: - Actions

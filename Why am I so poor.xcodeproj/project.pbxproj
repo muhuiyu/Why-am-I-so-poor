@@ -75,7 +75,7 @@
 		E4B9750F2871D5B30035A97B /* BudgetDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B9750E2871D5B30035A97B /* BudgetDataSource.swift */; };
 		E4B975112871D5BA0035A97B /* BudgetSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B975102871D5BA0035A97B /* BudgetSection.swift */; };
 		E4B975142871D67E0035A97B /* BudgetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B975132871D67E0035A97B /* BudgetCell.swift */; };
-		E4B975162871D69B0035A97B /* BudgetCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B975152871D69B0035A97B /* BudgetCellViewModel.swift */; };
+		E4B975162871D69B0035A97B /* BudgetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B975152871D69B0035A97B /* BudgetViewModel.swift */; };
 		E4B975182871D9820035A97B /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B975172871D9820035A97B /* Category.swift */; };
 		E4B9751A2871DF4C0035A97B /* TransactionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B975192871DF4C0035A97B /* TransactionDetailViewController.swift */; };
 		E4B9751C2871DFB00035A97B /* TransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B9751B2871DFB00035A97B /* TransactionViewModel.swift */; };
@@ -83,6 +83,12 @@
 		E4B9752228725EEC0035A97B /* UINavigationController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B9752128725EEC0035A97B /* UINavigationController+Extensions.swift */; };
 		E4B97524287281A90035A97B /* TransactionDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B97523287281A90035A97B /* TransactionDetailCell.swift */; };
 		E4B975262872900A0035A97B /* TransactionEditTextPropertyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B975252872900A0035A97B /* TransactionEditTextPropertyViewController.swift */; };
+		E4B975282872F6140035A97B /* BudgetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B975272872F6140035A97B /* BudgetDetailViewController.swift */; };
+		E4B9752C2872F68C0035A97B /* DetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B9752B2872F68C0035A97B /* DetailHeaderView.swift */; };
+		E4B9752E2872F81E0035A97B /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B9752D2872F81E0035A97B /* Database.swift */; };
+		E4B975302872FBE50035A97B /* EditBudgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B9752F2872FBE50035A97B /* EditBudgetViewController.swift */; };
+		E4B975322872FC5D0035A97B /* BudgetEditCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B975312872FC5D0035A97B /* BudgetEditCell.swift */; };
+		E4B97534287314D50035A97B /* UnderlinedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B97533287314D50035A97B /* UnderlinedTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -148,7 +154,7 @@
 		E4B9750E2871D5B30035A97B /* BudgetDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetDataSource.swift; sourceTree = "<group>"; };
 		E4B975102871D5BA0035A97B /* BudgetSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetSection.swift; sourceTree = "<group>"; };
 		E4B975132871D67E0035A97B /* BudgetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetCell.swift; sourceTree = "<group>"; };
-		E4B975152871D69B0035A97B /* BudgetCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetCellViewModel.swift; sourceTree = "<group>"; };
+		E4B975152871D69B0035A97B /* BudgetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetViewModel.swift; sourceTree = "<group>"; };
 		E4B975172871D9820035A97B /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		E4B975192871DF4C0035A97B /* TransactionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailViewController.swift; sourceTree = "<group>"; };
 		E4B9751B2871DFB00035A97B /* TransactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewModel.swift; sourceTree = "<group>"; };
@@ -156,6 +162,12 @@
 		E4B9752128725EEC0035A97B /* UINavigationController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extensions.swift"; sourceTree = "<group>"; };
 		E4B97523287281A90035A97B /* TransactionDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailCell.swift; sourceTree = "<group>"; };
 		E4B975252872900A0035A97B /* TransactionEditTextPropertyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionEditTextPropertyViewController.swift; sourceTree = "<group>"; };
+		E4B975272872F6140035A97B /* BudgetDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetDetailViewController.swift; sourceTree = "<group>"; };
+		E4B9752B2872F68C0035A97B /* DetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailHeaderView.swift; sourceTree = "<group>"; };
+		E4B9752D2872F81E0035A97B /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		E4B9752F2872FBE50035A97B /* EditBudgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditBudgetViewController.swift; sourceTree = "<group>"; };
+		E4B975312872FC5D0035A97B /* BudgetEditCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetEditCell.swift; sourceTree = "<group>"; };
+		E4B97533287314D50035A97B /* UnderlinedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlinedTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -325,6 +337,8 @@
 				E4B975252872900A0035A97B /* TransactionEditTextPropertyViewController.swift */,
 				E4B9751F2871E1D00035A97B /* TransactionListViewController.swift */,
 				E4B975082871D40F0035A97B /* BudgetViewController.swift */,
+				E4B9752F2872FBE50035A97B /* EditBudgetViewController.swift */,
+				E4B975272872F6140035A97B /* BudgetDetailViewController.swift */,
 				E4B974BA28716B6F0035A97B /* MeViewController.swift */,
 			);
 			path = Controllers;
@@ -344,6 +358,8 @@
 			isa = PBXGroup;
 			children = (
 				E4B974C628716B6F0035A97B /* InfoTextButton.swift */,
+				E4B9752B2872F68C0035A97B /* DetailHeaderView.swift */,
+				E4B97533287314D50035A97B /* UnderlinedTextField.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -394,6 +410,7 @@
 		E4B974FD28719CB80035A97B /* Data Source */ = {
 			isa = PBXGroup;
 			children = (
+				E4B9752D2872F81E0035A97B /* Database.swift */,
 				E4B974FE28719CCC0035A97B /* TransactionDataSource.swift */,
 				E4B9750028719D010035A97B /* TransactionSection.swift */,
 				E4B9750E2871D5B30035A97B /* BudgetDataSource.swift */,
@@ -406,6 +423,7 @@
 			isa = PBXGroup;
 			children = (
 				E4B975132871D67E0035A97B /* BudgetCell.swift */,
+				E4B975312872FC5D0035A97B /* BudgetEditCell.swift */,
 			);
 			path = Budget;
 			sourceTree = "<group>";
@@ -424,7 +442,7 @@
 			isa = PBXGroup;
 			children = (
 				E4B9750A2871D4380035A97B /* BudgetListViewModel.swift */,
-				E4B975152871D69B0035A97B /* BudgetCellViewModel.swift */,
+				E4B975152871D69B0035A97B /* BudgetViewModel.swift */,
 			);
 			path = Budget;
 			sourceTree = "<group>";
@@ -518,6 +536,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4B9752E2872F81E0035A97B /* Database.swift in Sources */,
 				E4B975052871ACFC0035A97B /* TransactionListHeaderView.swift in Sources */,
 				E4B974A328716AC50035A97B /* UIView+Extensions.swift in Sources */,
 				E4B975182871D9820035A97B /* Category.swift in Sources */,
@@ -534,11 +553,12 @@
 				E4B974AA28716AC50035A97B /* TimeInterval+Extensions.swift in Sources */,
 				E4B9749D28716AC50035A97B /* UIColor+Theme.swift in Sources */,
 				E4B9749B28716AC50035A97B /* CacheManager.swift in Sources */,
+				E4B975282872F6140035A97B /* BudgetDetailViewController.swift in Sources */,
 				E4B9750328719DAF0035A97B /* TransactionCellViewModel.swift in Sources */,
 				E4B974EF2871701D0035A97B /* TransactionListViewModel.swift in Sources */,
 				E4B9749728716AC50035A97B /* CircleView.swift in Sources */,
 				E4B974AD28716AC50035A97B /* Double+Extensions.swift in Sources */,
-				E4B975162871D69B0035A97B /* BudgetCellViewModel.swift in Sources */,
+				E4B975162871D69B0035A97B /* BudgetViewModel.swift in Sources */,
 				E4B9749628716AC50035A97B /* RoundButton.swift in Sources */,
 				E4B9751A2871DF4C0035A97B /* TransactionDetailViewController.swift in Sources */,
 				E4B97524287281A90035A97B /* TransactionDetailCell.swift in Sources */,
@@ -560,10 +580,13 @@
 				E4B9745B287169E40035A97B /* SceneDelegate.swift in Sources */,
 				E4B974FF28719CCC0035A97B /* TransactionDataSource.swift in Sources */,
 				E4B974A028716AC50035A97B /* ViewController.swift in Sources */,
+				E4B97534287314D50035A97B /* UnderlinedTextField.swift in Sources */,
 				E4B974D028716B6F0035A97B /* InfoTextButton.swift in Sources */,
 				E4B974A828716AC50035A97B /* Decimal+formatter.swift in Sources */,
 				E4B974AB28716AC50035A97B /* UILabel+Extensions.swift in Sources */,
+				E4B975322872FC5D0035A97B /* BudgetEditCell.swift in Sources */,
 				E4B9747328716AB50035A97B /* MeCoordinator.swift in Sources */,
+				E4B975302872FBE50035A97B /* EditBudgetViewController.swift in Sources */,
 				E4B9750B2871D4380035A97B /* BudgetListViewModel.swift in Sources */,
 				E4B975262872900A0035A97B /* TransactionEditTextPropertyViewController.swift in Sources */,
 				E4B974AC28716AC50035A97B /* Date+Extensions.swift in Sources */,
@@ -572,6 +595,7 @@
 				E4B974E728716BAD0035A97B /* BaseViewModel.swift in Sources */,
 				E4B975142871D67E0035A97B /* BudgetCell.swift in Sources */,
 				E4B9750F2871D5B30035A97B /* BudgetDataSource.swift in Sources */,
+				E4B9752C2872F68C0035A97B /* DetailHeaderView.swift in Sources */,
 				E4B9749C28716AC50035A97B /* Constants.swift in Sources */,
 				E4B974A528716AC50035A97B /* String+Extensions.swift in Sources */,
 				E4B9750D2871D4B30035A97B /* Budget.swift in Sources */,

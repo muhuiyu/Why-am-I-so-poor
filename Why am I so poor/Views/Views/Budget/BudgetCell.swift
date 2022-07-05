@@ -21,7 +21,7 @@ class BudgetCell: UITableViewCell {
     private let totalAmountLabel = UILabel()
     
     private let disposeBag = DisposeBag()
-    var viewModel = BudgetCellViewModel()
+    var viewModel = BudgetViewModel()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -99,14 +99,14 @@ extension BudgetCell {
             }
             .disposed(by: disposeBag)
 
-        viewModel.displayTitleString
+        viewModel.displayCategoryString
             .asObservable()
             .subscribe { value in
                 self.titleLabel.text = value
             }
             .disposed(by: disposeBag)
 
-        viewModel.displaySubtitleString
+        viewModel.displayMonthlyAverageString
             .asObservable()
             .subscribe { value in
                 self.subtitleLabel.text = value

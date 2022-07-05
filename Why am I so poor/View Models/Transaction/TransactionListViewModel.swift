@@ -15,11 +15,10 @@ typealias TransactionPrefixSum = [(String, Double)]
 
 class TransactionListViewModel {
     private let disposeBag = DisposeBag()
-    
-    var transactions: BehaviorRelay<[Transaction]> = BehaviorRelay(value: [])
-    
     lazy var dataSource = TransactionDataSource.dataSource()
-    // MARK: - display
+    
+    // MARK: - Reactive Properties
+    var transactions: BehaviorRelay<[Transaction]> = BehaviorRelay(value: [])
     var displayTransactions: BehaviorRelay<[TransactionSection]> = BehaviorRelay(value: [])
     
     init() {
@@ -28,7 +27,10 @@ class TransactionListViewModel {
         self.transactions
             .asObservable()
             .subscribe { transactions in
-                let sections: [TransactionSection] = self.getTransactionByMonth()
+//                let sections: [TransactionSection] = self.getTransactionByMonth()
+//                    .map { TransactionSection(header: $0, items: $1) }
+                
+                let sections: [TransactionSection] = self.getTransactionByDay()
                     .map { TransactionSection(header: $0, items: $1) }
                 self.displayTransactions.accept(sections)
             }
@@ -45,6 +47,11 @@ extension TransactionListViewModel {
     func getTransactionByMonth() -> TransactionGroup {
         guard !transactions.value.isEmpty else { return [:] }
         let groupedTransactions = TransactionGroup(grouping: transactions.value) { $0.month }
+        return groupedTransactions
+    }
+    func getTransactionByDay() -> TransactionGroup {
+        guard !transactions.value.isEmpty else { return [:] }
+        let groupedTransactions = TransactionGroup(grouping: transactions.value) { $0.day }
         return groupedTransactions
     }
     

@@ -39,6 +39,11 @@ extension Date {
         let weekDay = calendar.component(.weekday, from: self)
         return self.day(before: weekDay-1)
     }
+    
+    static var today: Date { Date() }
+    static var currentDay: Int { Date().dayOfMonth }
+    static var currentMonth: Int { Date().month }
+    static var currentYear: Int { Date().year }
 }
 
 // MARK: - Determine

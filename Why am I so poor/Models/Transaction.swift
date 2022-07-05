@@ -48,6 +48,10 @@ struct Transaction: Identifiable {
     var month: String {
         dateParsed.formatted(.dateTime.year().month(.wide))
     }
+    
+    var day: String {
+        dateParsed.formatted(.dateTime.year().month(.wide).day())
+    }
 }
 
 extension Transaction: Codable {
@@ -175,5 +179,21 @@ extension Transaction {
                     isExpense: true,
                     isEdited: false,
                     expenseTag: .smallBill),
+        Transaction(id: "4",
+                    date: "07/19/2022",
+                    institution: "OCBC",
+                    account: "Mu",
+                    merchant: "Web Market",
+                    amount: 293.0,
+                    type: .debit,
+                    paymentBy: .ocbcBankTransfer,
+                    categoryId: 501,
+                    category: .groceries,
+                    isRecurring: false,
+                    isPending: false,
+                    isTransfer: false,
+                    isExpense: true,
+                    isEdited: false,
+                    expenseTag: .dailyLiving),
     ]
 }

@@ -19,6 +19,8 @@ class HomeCoordinator: Coordinator {
         case editTransactionCategory(Transaction)
         case editTransactionTag(Transaction)
         case editTransactionNote(Transaction)
+        case editBudget
+        case viewBudgetDetail(Budget)
     }
     
     init(navigationController: UINavigationController,
@@ -77,6 +79,17 @@ extension HomeCoordinator {
             viewController.homeCoordinator = self
             // TODO: - set viewModel value
             return viewController
+        case .editBudget:
+            // TODO: - Set up viewController
+            let viewController = EditBudgetViewController()
+            viewController.homeCoordinator = self
+            return viewController
+        case .viewBudgetDetail(let budget):
+            // TODO: - Set up viewController
+            let viewController = BudgetDetailViewController()
+            viewController.viewModel.budget.accept(budget)
+            viewController.homeCoordinator = self
+            return viewController
         }
     }
 
@@ -90,16 +103,22 @@ extension HomeCoordinator {
     func showTransactionDetail(_ transaction: Transaction) {
         self.navigate(to: .viewTransactionDetail(transaction), presentModally: false)
     }
-    func editTransactionPaymentMethod(_ transaction: Transaction) {
+    func showEditTransactionPaymentMethod(_ transaction: Transaction) {
         self.navigate(to: .editTransactionPaymentMethod(transaction), presentModally: true)
     }
-    func editTransactionCategory(_ transaction: Transaction) {
+    func showEditTransactionCategory(_ transaction: Transaction) {
         self.navigate(to: .editTransactionCategory(transaction), presentModally: true)
     }
-    func editTransactionTag(_ transaction: Transaction) {
+    func showEditTransactionTag(_ transaction: Transaction) {
         self.navigate(to: .editTransactionTag(transaction), presentModally: true)
     }
-    func editTransactionNote(_ transaction: Transaction) {
+    func showEditTransactionNote(_ transaction: Transaction) {
         self.navigate(to: .editTransactionNote(transaction), presentModally: true)
+    }
+    func showEditBudget() {
+        self.navigate(to: .editBudget, presentModally: false)
+    }
+    func showBudgetDetail(_ budget: Budget) {
+        self.navigate(to: .viewBudgetDetail(budget), presentModally: false)
     }
 }

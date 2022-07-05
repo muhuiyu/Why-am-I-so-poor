@@ -15,7 +15,6 @@ class TransactionPreviewCell: UITableViewCell {
     private let detailStack = UIStackView()
     private let merchantLabel = UILabel()
     private let categoryLabel = UILabel()
-    private let dateLabel = UILabel()
     private let signedAmountLabel = UILabel()
     
     private let disposeBag = DisposeBag()
@@ -47,12 +46,7 @@ extension TransactionPreviewCell {
         categoryLabel.font = UIFont.small
         categoryLabel.text = "default"
         detailStack.addArrangedSubview(categoryLabel)
-        
-        dateLabel.textColor = UIColor.secondaryLabel
-        dateLabel.font = UIFont.small
-        dateLabel.text = "default"
-        detailStack.addArrangedSubview(dateLabel)
-        
+                
         detailStack.alignment = .leading
         detailStack.axis = .vertical
         detailStack.spacing = Constants.spacing.trivial
@@ -102,13 +96,6 @@ extension TransactionPreviewCell {
             .asObservable()
             .subscribe { value in
                 self.categoryLabel.text = value
-            }
-            .disposed(by: disposeBag)
-        
-        viewModel.displayDateString
-            .asObservable()
-            .subscribe { value in
-                self.dateLabel.text = value
             }
             .disposed(by: disposeBag)
         

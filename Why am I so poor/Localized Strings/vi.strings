@@ -1,13 +1,13 @@
 /* 
   vi.strings
-  Fastiee
+  Why am I so poor
 
   Created by Mu Yu on 6/25/22.
   
 */
 
 // MARK: - Generic
-"AppName" = "Fastiee";
+"AppName" = "Why am I so poor";
 "Login" = "Đăng nhập";
 "Logout" = "Đăng xuất";
 
@@ -34,3 +34,7 @@
 "TransactionDetail.Category" = "Category";
 "TransactionDetail.PaymentBy" = "Payment by";
 "TransactionDetail.ExpenseTag" = "Tag";
+
+// MARK: - Budget
+"Budget.EditBudget" = "Edit";
+"Budget.EditBudgetTitle" = "Edit Budget";

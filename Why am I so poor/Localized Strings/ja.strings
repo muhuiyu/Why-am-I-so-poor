@@ -1,13 +1,13 @@
 /* 
   ja.strings
-  Fastiee
+  Why am I so poor
 
   Created by Mu Yu on 6/25/22.
   
 */
 
 // MARK: - Generic
-"AppName" = "Fastiee";
+"AppName" = "Why am I so poor";
 "Login" = "ログイン";
 "Logout" = "ログアウト";
 
@@ -34,3 +34,7 @@
 "TransactionDetail.Category" = "カテゴリー";
 "TransactionDetail.PaymentBy" = "Payment By";
 "TransactionDetail.ExpenseTag" = "タグ";
+
+// MARK: - Budget
+"Budget.EditBudget" = "管理";
+"Budget.EditBudgetTitle" = "Edit Budget";

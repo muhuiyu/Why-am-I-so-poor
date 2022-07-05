@@ -45,13 +45,20 @@ extension UINavigationItem {
         titleView = label
         label.sizeToFit()
     }
-    func setBarButtonItem(at position: ItemPosition, with title: String? = nil, image: UIImage? = nil, target: Any?, action: Selector) {
+    func setBarButtonItem(at position: ItemPosition, with title: String? = nil, isBold: Bool = false, image: UIImage? = nil, target: Any?, action: Selector) {
         let item: UIBarButtonItem
         if let image = image {
             item = UIBarButtonItem(image: image, style: .done, target: target, action: action)
         } else {
             item = UIBarButtonItem(title: title, style: .done, target: target, action: action)
-            // TODO: - set title text attributes
+            item.setTitleTextAttributes([
+                NSAttributedString.Key.font: isBold ? UIFont.bodyHeavy : UIFont.body,
+                NSAttributedString.Key.foregroundColor: UIColor.brand.primary,
+            ], for: .normal)
+            item.setTitleTextAttributes([
+                NSAttributedString.Key.font: isBold ? UIFont.bodyHeavy : UIFont.body,
+                NSAttributedString.Key.foregroundColor: UIColor.tertiaryLabel
+            ], for: .disabled)
         }
         switch position {
         case .left:

@@ -11,22 +11,30 @@ import RxRelay
 
 class BudgetListViewModel {
     private let disposeBag = DisposeBag()
-    lazy var dataSource = BudgetDataSource.dataSource()
+    private let mode: Mode
+    lazy var dataSource = BudgetDataSource.dataSource(mode: mode)
     
-    // MARK: -
+    // MARK: - Shared ViewModel
+    var budgetViewModel = BudgetViewModel()
+    
+    // MARK: - Reactive Properties
     var budgets: BehaviorRelay<[Budget]> = BehaviorRelay(value: [])
     var displayBudgets: BehaviorRelay<[BudgetSection]> = BehaviorRelay(value: [])
     
-    init() {
+    enum Mode {
+        case edit
+        case view
+    }
+    
+    init(mode: Mode) {
+        self.mode = mode
+        
         getBudgets()
         
         self.budgets
             .asObservable()
             .subscribe { budgets in
                 self.displayBudgets.accept([BudgetSection(header: "", items: budgets)])
-//                let sections: [BudgetSection] = self.getTransactionByMonth()
-//                    .map { TransactionSection(header: $0, items: $1) }
-//                self.displayTransactions.accept(sections)
             }
             .disposed(by: disposeBag)
     }
@@ -45,10 +53,5 @@ extension BudgetListViewModel {
 }
 
 extension BudgetListViewModel {
-    func didSelect(_ budget: Budget, at indexPath: IndexPath) {
-        print(budget)
-        print(indexPath)
-        
-        // TODO: - Go to detail page
-    }
+
 }

@@ -59,8 +59,12 @@ enum BudgetState {
 
 extension Budget {
     static let testEntries: [Budget] = [
+        Budget(category: .autoAndTransport, categoryId: 1, amount: 100),
+        Budget(category: .billsAndUtilities, categoryId: 2, amount: 50),
+        Budget(category: .entertainment, categoryId: 3, amount: 50),
+        Budget(category: .feeAndCharges, categoryId: 4, amount: 50),
         Budget(category: .foodAndDining, categoryId: 5, amount: 200),
         Budget(category: .home, categoryId: 6, amount: 1030),
-        Budget(category: .billsAndUtilities, categoryId: 2, amount: 50),
+        Budget(category: .shopping, categoryId: 8, amount: 50),
     ]
 }

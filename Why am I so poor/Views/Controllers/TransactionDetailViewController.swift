@@ -12,10 +12,7 @@ class TransactionDetailViewController: BaseViewController {
     private let disposeBag = DisposeBag()
     
     // MARK: - Views
-    private let headerStack = UIStackView()
-    private let amountLabel = UILabel()
-    private let merchantLabel = UILabel()
-    private let dateLabel = UILabel()
+    private let headerView = DetailHeaderView()
     private let tableView = UITableView()
     
     // MARK: - Cells
@@ -45,40 +42,27 @@ extension TransactionDetailViewController {
     private func configureViews() {
         navigationController?.title = "details"
         
-        // MARK: - Header
-        amountLabel.font = UIFont.h1
-        amountLabel.textColor = .label
-        headerStack.addArrangedSubview(amountLabel)
-        merchantLabel.font = UIFont.body
-        merchantLabel.textColor = .secondaryLabel
-        headerStack.addArrangedSubview(merchantLabel)
-        dateLabel.font = UIFont.body
-        dateLabel.textColor = .secondaryLabel
-        headerStack.addArrangedSubview(dateLabel)
-        headerStack.axis = .vertical
-        headerStack.spacing = Constants.spacing.small
-        headerStack.alignment = .center
-        view.addSubview(headerStack)
+        view.addSubview(headerView)
         
         // MARK: - Cells
         categoryCell.title = Localized.TransactionDetail.category
         categoryCell.tapHandler = { [weak self] in
             guard let transaction = self?.viewModel.transaction.value else { return }
-            self?.homeCoordinator?.editTransactionCategory(transaction)
+            self?.homeCoordinator?.showEditTransactionCategory(transaction)
         }
         
         paymentMethodCell.title = Localized.TransactionDetail.paymentBy
         paymentMethodCell.valueIcon = UIImage(systemName: "creditcard.fill")
         paymentMethodCell.tapHandler = { [weak self] in
             guard let transaction = self?.viewModel.transaction.value else { return }
-            self?.homeCoordinator?.editTransactionPaymentMethod(transaction)
+            self?.homeCoordinator?.showEditTransactionPaymentMethod(transaction)
         }
         
         expenseTagCell.title = Localized.TransactionDetail.expenseTag
         expenseTagCell.valueIcon = UIImage(systemName: "tag.fill")
         expenseTagCell.tapHandler = { [weak self] in
             guard let transaction = self?.viewModel.transaction.value else { return }
-            self?.homeCoordinator?.editTransactionTag(transaction)
+            self?.homeCoordinator?.showEditTransactionTag(transaction)
         }
         
         noteCell.title = Localized.TransactionDetail.note
@@ -86,7 +70,7 @@ extension TransactionDetailViewController {
         noteCell.valueIcon = UIImage(systemName: "pencil.fill")
         noteCell.tapHandler = { [weak self] in
             guard let transaction = self?.viewModel.transaction.value else { return }
-            self?.homeCoordinator?.editTransactionNote(transaction)
+            self?.homeCoordinator?.showEditTransactionNote(transaction)
         }
         
         // MARK: - TableView
@@ -96,11 +80,11 @@ extension TransactionDetailViewController {
         view.addSubview(tableView)
     }
     private func configureConstraints() {
-        headerStack.snp.remakeConstraints { make in
+        headerView.snp.remakeConstraints { make in
             make.top.leading.trailing.equalTo(view.layoutMarginsGuide)
         }
         tableView.snp.remakeConstraints { make in
-            make.top.equalTo(headerStack.snp.bottom).offset(Constants.spacing.medium)
+            make.top.equalTo(headerView.snp.bottom).offset(Constants.spacing.large)
             make.leading.trailing.bottom.equalTo(view.safeAreaLayoutGuide)
         }
     }
@@ -118,14 +102,14 @@ extension TransactionDetailViewController {
         viewModel.displayDateString
             .asObservable()
             .subscribe { value in
-                self.dateLabel.text = value
+                self.headerView.secondSubtitle = value
             }
             .disposed(by: disposeBag)
 
         viewModel.displayMerchantString
             .asObservable()
             .subscribe { value in
-                self.merchantLabel.text = value
+                self.headerView.firstSubtitle = value
             }
             .disposed(by: disposeBag)
 
@@ -139,7 +123,7 @@ extension TransactionDetailViewController {
         viewModel.displayAmountString
             .asObservable()
             .subscribe { value in
-                self.amountLabel.text = value
+                self.headerView.title = value
             }
             .disposed(by: disposeBag)
 

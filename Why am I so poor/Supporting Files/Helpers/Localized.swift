@@ -50,6 +50,14 @@ extension Localized {
     }
 }
 
+// MARK: - Budget
+extension Localized {
+    struct Budget {
+        static var editBudget: String { "Budget.EditBudget".localized }
+        static var editBudgetTitle: String { "Budget.EditBudgetTitle".localized }
+    }
+}
+
 // MARK: - Language
 extension Localized {
     struct Language {

@@ -54,7 +54,7 @@ class BalanceView: UIView {
 extension BalanceView {
     private func configureViews() {
         titleLabel.text = "default"
-        titleLabel.text = Localized.Home.totalBalance
+        titleLabel.text = Localized.Home.balanceTitle
         titleLabel.font = UIFont.smallBold
         titleLabel.textColor = UIColor.brand.primary
         titleLabel.textAlignment = .left
@@ -78,11 +78,11 @@ extension BalanceView {
         addSubview(stackView)
         
         addTransactionButton.text = Localized.Home.addTransaction
-        addTransactionButton.icon = UIImage(systemName: "plus.circle.fill")
+        addTransactionButton.icon = Icons.get(.plusCircle, isFilled: true)
         buttonStackView.addArrangedSubview(addTransactionButton)
         
         accountListButton.text = Localized.Home.accounts
-        accountListButton.icon = UIImage(systemName: "creditcard.circle.fill")
+        accountListButton.icon = Icons.get(.creditcardCircle, isFilled: true)
         buttonStackView.addArrangedSubview(accountListButton)
         
         buttonStackView.spacing = Constants.spacing.trivial

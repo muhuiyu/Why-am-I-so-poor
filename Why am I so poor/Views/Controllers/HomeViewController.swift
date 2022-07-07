@@ -11,7 +11,10 @@ import RxSwift
 class HomeViewController: BaseViewController {
     private let disposeBag = DisposeBag()
     
+    private let headerView = UIView()
+    private let balanceView = BalanceView()
     private let listHeaderView = TransactionListHeaderView()
+    
     private let tableView = UITableView()
     
     var homeViewModel = HomeViewModel()
@@ -33,24 +36,47 @@ class HomeViewController: BaseViewController {
 extension HomeViewController {
     private func configureViews() {
         title = homeViewModel.displayTitle
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "bell.badge"),
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: Icons.get(.bellbadge, isFilled: true),
                                                             style: .plain,
                                                             target: self,
                                                             action: #selector(homeViewModel.didTapOnNotification))
+        
+        balanceView.addTransactionTapHandler = { [weak self] in
+            self?.didTapAddTransaction()
+        }
+        balanceView.viewAccountListTapHandler = { [weak self] in
+            self?.didTapViewAccounts()
+        }
+        headerView.addSubview(balanceView)
+        
         listHeaderView.tapHandler = {[weak self] in
             self?.homeCoordinator?.showTransactionList()
         }
-        view.addSubview(listHeaderView)
+        headerView.addSubview(listHeaderView)
+        view.addSubview(headerView)
+        
+        // TODO: - Set as headerView
+//        tableView.tableHeaderView = headerView
+//        tableView.tableHeaderView?.layoutIfNeeded()
+//        tableView.tableHeaderView = tableView.tableHeaderView
         
         tableView.register(TransactionPreviewCell.self, forCellReuseIdentifier: TransactionPreviewCell.reuseID)
         view.addSubview(tableView)
     }
     private func configureConstraints() {
+        balanceView.snp.remakeConstraints { make in
+            make.top.leading.trailing.equalToSuperview()
+        }
         listHeaderView.snp.remakeConstraints { make in
+            make.top.equalTo(balanceView.snp.bottom).offset(Constants.spacing.medium)
+            make.leading.trailing.equalTo(balanceView)
+            make.bottom.equalToSuperview()
+        }
+        headerView.snp.remakeConstraints { make in
             make.top.leading.trailing.equalTo(view.layoutMarginsGuide)
         }
         tableView.snp.remakeConstraints { make in
-            make.top.equalTo(listHeaderView.snp.bottom).offset(Constants.spacing.small)
+            make.top.equalTo(headerView.snp.bottom)
             make.leading.trailing.bottom.equalTo(view.safeAreaLayoutGuide)
         }
     }
@@ -69,6 +95,30 @@ extension HomeViewController {
                 self.tableView.deselectRow(at: indexPath, animated: true)
             }
             .disposed(by: disposeBag)
+        
+        transactionListViewModel.displayMonthlyBalanceString
+            .asObservable()
+            .subscribe { value in
+                self.balanceView.amountString = value
+            }
+            .disposed(by: disposeBag)
+        
+        transactionListViewModel.displayNumberOfAccountsString
+            .asObservable()
+            .subscribe { value in
+                self.balanceView.subtitleString = value
+            }
+            .disposed(by: disposeBag)
+
     }
 }
 // MARK: - Navigation
+extension HomeViewController {
+    private func didTapAddTransaction() {
+        homeCoordinator?.showAddTransaction()
+    }
+    private func didTapViewAccounts() {
+        // TODO: -
+    }
+
+}

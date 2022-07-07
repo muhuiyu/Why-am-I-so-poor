@@ -41,7 +41,7 @@ extension EditBudgetViewController {
         // MARK: - Navigation Bar
         navigationItem.setTitle(Localized.Budget.editBudgetTitle)
         navigationItem.setBarButtonItem(at: .right,
-                                        with: "Save",
+                                        with: Localized.General.save,
                                         isBold: true,
                                         target: self,
                                         action: #selector(didTapSave))

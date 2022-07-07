@@ -95,4 +95,7 @@ extension Category {
     ]
     
     static let all: [Category] = categories + subcategroreis
+    static var allToString: [String] {
+        self.all.map { $0.name }
+    }
 }

@@ -11,6 +11,12 @@ struct Localized {
     static var AppName: String { "APPNAME".localized }
 }
 
+extension Localized {
+    struct General {
+        static var save: String { "General.Save".localized }
+    }
+}
+
 // MARK: - Loading Screen
 extension Localized {
     struct Loading {
@@ -30,7 +36,9 @@ extension Localized {
 // MARK: - Home
 extension Localized {
     struct Home {
-        
+        static var balanceTitle: String { "Home.BalanceTitle".localized }
+        static var addTransaction: String { "Home.AddTransaction".localized }
+        static var accounts: String { "Home.Accounts".localized }
     }
 }
 
@@ -42,9 +50,19 @@ extension Localized {
     }
     
     struct TransactionDetail {
+        static var addTransaction: String { "TransactionDetail.AddTransaction".localized }
+        static var transactionDetail: String { "TransactionDetail.TransactionDetail".localized }
+        static var amount: String { "TransactionDetail.Amount".localized }
+        static var enterAmount: String { "TransactionDetail.EnterAmount".localized }
+        static var date: String { "TransactionDetail.Date".localized }
         static var category: String { "TransactionDetail.Category".localized }
+        static var addCategory: String { "TransactionDetail.AddCategory".localized }
         static var paymentBy: String { "TransactionDetail.PaymentBy".localized }
-        static var expenseTag: String { "TransactionDetail.ExpenseTag".localized }
+        static var addPaymentMethod: String { "TransactionDetail.AddPaymentMethod".localized }
+        static var merchant: String { "TransactionDetail.Merchant".localized }
+        static var addMerchant: String { "TransactionDetail.AddMerchant".localized }
+        static var tag: String { "TransactionDetail.Tag".localized }
+        static var addTag: String { "TransactionDetail.AddTag".localized }
         static var note: String { "TransactionDetail.Note".localized }
         static var addNote: String { "TransactionDetail.AddNote".localized }
     }

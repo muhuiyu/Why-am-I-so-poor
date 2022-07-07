@@ -10,6 +10,7 @@
 "AppName" = "Why am I so poor";
 "Login" = "ログイン";
 "Logout" = "ログアウト";
+"General.Save" = "Save";
 
 // MARK: - Main Tab Bar
 "MainTab.Home" = "ホーム";
@@ -26,14 +27,29 @@
 "Language.vi" = "ベトナム語";
 "Language.changeLanguage" = "言語を変更する";
 
+// MARK: - Home
+"Home.BalanceTitle" = "Monthly balance";
+"Home.AddTransaction" = "Add";
+"Home.Accounts" = "accounts";
+
 // MARK: - Transaction Detail
+"TransactionDetail.TransactionDetail" = "Transaction Detail";
+"TransactionDetail.AddTransaction" = "Add Transaction";
 "TransactionList.RecentTransactions" = "最近のご利用";
 "TransactionList.SeeAll" = "全てを見る";
+"TransactionDetail.Amount" = "Amount";
+"TransactionDetail.EnterAmount" = "Enter amount";
+"TransactionDetail.Date" = "Date";
+"TransactionDetail.Category" = "カテゴリー";
+"TransactionDetail.AddCategory" = "カテゴリーを追加";
+"TransactionDetail.Merchant" = "Merchant";
+"TransactionDetail.AddMerchant" = "Add merchant";
+"TransactionDetail.PaymentBy" = "Payment by";
+"TransactionDetail.AddPaymentMethod" = "Add payment method";
+"TransactionDetail.Tag" = "タグ";
+"TransactionDetail.AddTag" = "タグを追加";
 "TransactionDetail.Note" = "メッセージ";
 "TransactionDetail.AddNote" = "メモを追加";
-"TransactionDetail.Category" = "カテゴリー";
-"TransactionDetail.PaymentBy" = "Payment By";
-"TransactionDetail.ExpenseTag" = "タグ";
 
 // MARK: - Budget
 "Budget.EditBudget" = "管理";

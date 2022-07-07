@@ -18,23 +18,35 @@ class TransactionListViewModel {
     lazy var dataSource = TransactionDataSource.dataSource()
     
     // MARK: - Reactive Properties
-    var transactions: BehaviorRelay<[Transaction]> = BehaviorRelay(value: [])
+    private var transactions: BehaviorRelay<[Transaction]> = BehaviorRelay(value: [])
+    private var accounts: BehaviorRelay<[Account]> = BehaviorRelay(value: [])
     var displayTransactions: BehaviorRelay<[TransactionSection]> = BehaviorRelay(value: [])
+    var displayMonthlyBalanceString: BehaviorRelay<String> = BehaviorRelay(value: "")
+    var displayNumberOfAccountsString: BehaviorRelay<String> = BehaviorRelay(value: "")
     
     init() {
         getTransactions()
         
         self.transactions
             .asObservable()
-            .subscribe { transactions in
-//                let sections: [TransactionSection] = self.getTransactionByMonth()
-//                    .map { TransactionSection(header: $0, items: $1) }
-                
+            .subscribe { _ in
                 let sections: [TransactionSection] = self.getTransactionByDay()
                     .map { TransactionSection(header: $0, items: $1) }
                 self.displayTransactions.accept(sections)
             }
             .disposed(by: disposeBag)
+        
+        getAccounts()
+        
+        self.accounts
+            .asObservable()
+            .subscribe { _ in
+                self.displayNumberOfAccountsString.accept("\(self.accounts.value.count) accounts")
+            }
+            .disposed(by: disposeBag)
+        
+        getMonthlyBalance()
+
     }
 }
 
@@ -65,7 +77,7 @@ extension TransactionListViewModel {
         var cumulativeSum = TransactionPrefixSum()
         
         for date in stride(from: dateInterval.start, to: today, by: 60 * 60 * 24) {
-            let dailyExpenses = transactions.value.filter { $0.dateParsed == date && $0.isExpense }
+            let dailyExpenses = transactions.value.filter { $0.dateParsed == date && $0.type == .expense }
             let dailyTotal = dailyExpenses.reduce(0) { $0 - $1.signedAmount }
             
             sum += dailyTotal
@@ -77,12 +89,22 @@ extension TransactionListViewModel {
     }
 }
 
+extension TransactionListViewModel {
+    private func getAccounts() {
+        // TODO: -
+        let value = [
+            Account(), Account()
+        ]
+        accounts.accept(value)
+    }
+    private func getMonthlyBalance() {
+        // TODO: -
+        let monthlyBalance: Double = 2392.1
+        displayMonthlyBalanceString.accept(monthlyBalance.toCurrencyString())
+    }
+}
+
 // MARK: - Delegate
 extension TransactionListViewModel {
-//    func didSelect(_ transaction: Transaction, at indexPath: IndexPath) {
-//        print(transaction)
-//        print(indexPath)
-//        
-//        // TODO: - Go to detail page
-//    }
+
 }

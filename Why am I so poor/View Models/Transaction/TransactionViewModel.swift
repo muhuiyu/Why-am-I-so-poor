@@ -16,7 +16,6 @@ class TransactionViewModel {
     var transaction: BehaviorRelay<Transaction?> = BehaviorRelay(value: nil)
     var displayIcon: BehaviorRelay<UIImage?> = BehaviorRelay(value: nil)
     var displayDateString: BehaviorRelay<String> = BehaviorRelay(value: "")
-    var displayInstitutionString: BehaviorRelay<String> = BehaviorRelay(value: "")
     var displayMerchantString: BehaviorRelay<String> = BehaviorRelay(value: "")
     var displayAmountString: BehaviorRelay<String> = BehaviorRelay(value: "")
     var displayPaymentMethodString: BehaviorRelay<String> = BehaviorRelay(value: "")
@@ -32,12 +31,11 @@ class TransactionViewModel {
                     self.displayIcon.accept(value.icon)
                     self.displayDateString.accept(value.dateParsed.formatted())
                     self.displayMerchantString.accept(value.merchant)
-                    self.displayInstitutionString.accept(value.institution)
                     self.displayAmountString.accept(value.signedAmount.toCurrencyString())
                     self.displayPaymentMethodString.accept(value.paymentBy.rawValue)
                     self.displayCategoryString.accept(value.category.name)
                     self.displayNoteString.accept(value.note)
-                    self.displayExpenseTagString.accept(value.expenseTag.rawValue)
+                    self.displayExpenseTagString.accept(value.tag.rawValue)
                 }
             })
             .disposed(by: disposeBag)
@@ -45,7 +43,16 @@ class TransactionViewModel {
 }
 
 extension TransactionViewModel {
-    func editNote() {
-        // generate viewController
+    func updateTransaction() {
+        guard let transaction = transaction.value else { return }
+        Database.shared.updateData(of: transaction) { result in
+            switch result {
+            case .success:
+                return
+            case .failure(let error):
+                print(error)
+                // TODO: - how to handle?
+            }
+        }
     }
 }

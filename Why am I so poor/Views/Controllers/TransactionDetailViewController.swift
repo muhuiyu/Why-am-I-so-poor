@@ -18,12 +18,12 @@ class TransactionDetailViewController: BaseViewController {
     // MARK: - Cells
     private let paymentMethodCell = TransactionDetailCell()
     private let categoryCell = TransactionDetailCell()
-    private let expenseTagCell = TransactionDetailCell()
+    private let tagCell = TransactionDetailCell()
     private let noteCell = TransactionDetailCell()
     private lazy var cells: [UITableViewCell] = [
         paymentMethodCell,
         categoryCell,
-        expenseTagCell,
+        tagCell,
         noteCell,
     ]
     
@@ -48,29 +48,29 @@ extension TransactionDetailViewController {
         categoryCell.title = Localized.TransactionDetail.category
         categoryCell.tapHandler = { [weak self] in
             guard let transaction = self?.viewModel.transaction.value else { return }
-            self?.homeCoordinator?.showEditTransactionCategory(transaction)
+            self?.homeCoordinator?.showEditTransactionOptionField(transaction, field: .category)
         }
         
         paymentMethodCell.title = Localized.TransactionDetail.paymentBy
-        paymentMethodCell.valueIcon = UIImage(systemName: "creditcard.fill")
+        paymentMethodCell.valueIcon = Icons.get(.creditcard, isFilled: true)
         paymentMethodCell.tapHandler = { [weak self] in
             guard let transaction = self?.viewModel.transaction.value else { return }
-            self?.homeCoordinator?.showEditTransactionPaymentMethod(transaction)
+            self?.homeCoordinator?.showEditTransactionOptionField(transaction, field: .paymentBy)
         }
         
-        expenseTagCell.title = Localized.TransactionDetail.expenseTag
-        expenseTagCell.valueIcon = UIImage(systemName: "tag.fill")
-        expenseTagCell.tapHandler = { [weak self] in
+        tagCell.title = Localized.TransactionDetail.tag
+        tagCell.valueIcon = Icons.get(.tag, isFilled: true)
+        tagCell.tapHandler = { [weak self] in
             guard let transaction = self?.viewModel.transaction.value else { return }
-            self?.homeCoordinator?.showEditTransactionTag(transaction)
+            self?.homeCoordinator?.showEditTransactionOptionField(transaction, field: .tag)
         }
         
         noteCell.title = Localized.TransactionDetail.note
         noteCell.value = Localized.TransactionDetail.addNote
-        noteCell.valueIcon = UIImage(systemName: "pencil.fill")
+        noteCell.valueIcon = Icons.get(.pencil)
         noteCell.tapHandler = { [weak self] in
             guard let transaction = self?.viewModel.transaction.value else { return }
-            self?.homeCoordinator?.showEditTransactionNote(transaction)
+            self?.homeCoordinator?.showEditTransactionOptionField(transaction, field: .note)
         }
         
         // MARK: - TableView
@@ -110,13 +110,6 @@ extension TransactionDetailViewController {
             .asObservable()
             .subscribe { value in
                 self.headerView.firstSubtitle = value
-            }
-            .disposed(by: disposeBag)
-
-        viewModel.displayInstitutionString
-            .asObservable()
-            .subscribe { value in
-                // TODO: - update view
             }
             .disposed(by: disposeBag)
 

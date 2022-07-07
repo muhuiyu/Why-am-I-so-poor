@@ -36,9 +36,9 @@ extension UINavigationItem {
         case left
         case right
     }
-    func setTitle(_ text: String, color: UIColor = .white) {
+    func setTitle(_ text: String, color: UIColor = .label) {
         let label = UILabel(frame: .zero)
-        label.font = UIFont.bodyBold
+        label.font = UIFont.systemFont(ofSize: 17, weight: .semibold)
         label.textColor = color
         label.text = text
         label.translatesAutoresizingMaskIntoConstraints = true
@@ -51,14 +51,14 @@ extension UINavigationItem {
             item = UIBarButtonItem(image: image, style: .done, target: target, action: action)
         } else {
             item = UIBarButtonItem(title: title, style: .done, target: target, action: action)
-            item.setTitleTextAttributes([
-                NSAttributedString.Key.font: isBold ? UIFont.bodyHeavy : UIFont.body,
-                NSAttributedString.Key.foregroundColor: UIColor.brand.primary,
-            ], for: .normal)
-            item.setTitleTextAttributes([
-                NSAttributedString.Key.font: isBold ? UIFont.bodyHeavy : UIFont.body,
-                NSAttributedString.Key.foregroundColor: UIColor.tertiaryLabel
-            ], for: .disabled)
+//            item.setTitleTextAttributes([
+//                NSAttributedString.Key.font: isBold ? UIFont.bodyHeavy : UIFont.body,
+//                NSAttributedString.Key.foregroundColor: UIColor.brand.primary,
+//            ], for: .normal)
+//            item.setTitleTextAttributes([
+//                NSAttributedString.Key.font: isBold ? UIFont.bodyHeavy : UIFont.body,
+//                NSAttributedString.Key.foregroundColor: UIColor.tertiaryLabel
+//            ], for: .disabled)
         }
         switch position {
         case .left:

@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E44D35D9287521EA0076EE0A /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = E44D35D8287521EA0076EE0A /* FirebaseAuth */; };
+		E44D35DB287521EA0076EE0A /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = E44D35DA287521EA0076EE0A /* FirebaseAuthCombine-Community */; };
+		E44D35DD287521EA0076EE0A /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = E44D35DC287521EA0076EE0A /* FirebaseFirestore */; };
+		E44D35DF287521EA0076EE0A /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = E44D35DE287521EA0076EE0A /* FirebaseFirestoreCombine-Community */; };
+		E44D35E1287521EA0076EE0A /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E44D35E0287521EA0076EE0A /* FirebaseFirestoreSwift */; };
+		E44D35E3287521EA0076EE0A /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = E44D35E2287521EA0076EE0A /* FirebaseStorage */; };
+		E44D35E5287521EA0076EE0A /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = E44D35E4287521EA0076EE0A /* FirebaseStorageCombine-Community */; };
+		E44D35E828767C130076EE0A /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44D35E728767C130076EE0A /* PickerViewController.swift */; };
 		E4B97459287169E40035A97B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B97458287169E40035A97B /* AppDelegate.swift */; };
 		E4B9745B287169E40035A97B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B9745A287169E40035A97B /* SceneDelegate.swift */; };
 		E4B97462287169E50035A97B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4B97461287169E50035A97B /* Assets.xcassets */; };
@@ -82,16 +90,25 @@
 		E4B975202871E1D00035A97B /* TransactionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B9751F2871E1D00035A97B /* TransactionListViewController.swift */; };
 		E4B9752228725EEC0035A97B /* UINavigationController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B9752128725EEC0035A97B /* UINavigationController+Extensions.swift */; };
 		E4B97524287281A90035A97B /* TransactionDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B97523287281A90035A97B /* TransactionDetailCell.swift */; };
-		E4B975262872900A0035A97B /* TransactionEditTextPropertyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B975252872900A0035A97B /* TransactionEditTextPropertyViewController.swift */; };
 		E4B975282872F6140035A97B /* BudgetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B975272872F6140035A97B /* BudgetDetailViewController.swift */; };
 		E4B9752C2872F68C0035A97B /* DetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B9752B2872F68C0035A97B /* DetailHeaderView.swift */; };
 		E4B9752E2872F81E0035A97B /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B9752D2872F81E0035A97B /* Database.swift */; };
 		E4B975302872FBE50035A97B /* EditBudgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B9752F2872FBE50035A97B /* EditBudgetViewController.swift */; };
 		E4B975322872FC5D0035A97B /* BudgetEditCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B975312872FC5D0035A97B /* BudgetEditCell.swift */; };
 		E4B97534287314D50035A97B /* UnderlinedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B97533287314D50035A97B /* UnderlinedTextField.swift */; };
+		E4B975382873CB080035A97B /* BalanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B975372873CB080035A97B /* BalanceView.swift */; };
+		E4B9753A2873D0120035A97B /* IconTextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B975392873D0120035A97B /* IconTextButton.swift */; };
+		E4B9753C28740A070035A97B /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B9753B28740A070035A97B /* Account.swift */; };
+		E4B9753E28740D490035A97B /* AddTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B9753D28740D490035A97B /* AddTransactionViewController.swift */; };
+		E4B9754028740EFC0035A97B /* TransactionAmountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B9753F28740EFC0035A97B /* TransactionAmountCell.swift */; };
+		E4B97542287412B70035A97B /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B97541287412B70035A97B /* Icons.swift */; };
+		E4B97544287444900035A97B /* TransactionEditFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B97543287444900035A97B /* TransactionEditFieldViewController.swift */; };
+		E4B97546287445F30035A97B /* TransactionEditFieldViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B97545287445F30035A97B /* TransactionEditFieldViewModel.swift */; };
+		E4B975512874EA4D0035A97B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E4B975502874EA4D0035A97B /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E44D35E728767C130076EE0A /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
 		E4B97455287169E40035A97B /* Why am I so poor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Why am I so poor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4B97458287169E40035A97B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E4B9745A287169E40035A97B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -161,13 +178,21 @@
 		E4B9751F2871E1D00035A97B /* TransactionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListViewController.swift; sourceTree = "<group>"; };
 		E4B9752128725EEC0035A97B /* UINavigationController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extensions.swift"; sourceTree = "<group>"; };
 		E4B97523287281A90035A97B /* TransactionDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailCell.swift; sourceTree = "<group>"; };
-		E4B975252872900A0035A97B /* TransactionEditTextPropertyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionEditTextPropertyViewController.swift; sourceTree = "<group>"; };
 		E4B975272872F6140035A97B /* BudgetDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetDetailViewController.swift; sourceTree = "<group>"; };
 		E4B9752B2872F68C0035A97B /* DetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailHeaderView.swift; sourceTree = "<group>"; };
 		E4B9752D2872F81E0035A97B /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		E4B9752F2872FBE50035A97B /* EditBudgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditBudgetViewController.swift; sourceTree = "<group>"; };
 		E4B975312872FC5D0035A97B /* BudgetEditCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetEditCell.swift; sourceTree = "<group>"; };
 		E4B97533287314D50035A97B /* UnderlinedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlinedTextField.swift; sourceTree = "<group>"; };
+		E4B975372873CB080035A97B /* BalanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceView.swift; sourceTree = "<group>"; };
+		E4B975392873D0120035A97B /* IconTextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconTextButton.swift; sourceTree = "<group>"; };
+		E4B9753B28740A070035A97B /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		E4B9753D28740D490035A97B /* AddTransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionViewController.swift; sourceTree = "<group>"; };
+		E4B9753F28740EFC0035A97B /* TransactionAmountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionAmountCell.swift; sourceTree = "<group>"; };
+		E4B97541287412B70035A97B /* Icons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icons.swift; sourceTree = "<group>"; };
+		E4B97543287444900035A97B /* TransactionEditFieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionEditFieldViewController.swift; sourceTree = "<group>"; };
+		E4B97545287445F30035A97B /* TransactionEditFieldViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionEditFieldViewModel.swift; sourceTree = "<group>"; };
+		E4B975502874EA4D0035A97B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,16 +204,34 @@
 				E4B974B428716AF10035A97B /* RxSwift in Frameworks */,
 				E4B974B728716B000035A97B /* SnapKit in Frameworks */,
 				E4B974F4287170720035A97B /* DequeModule in Frameworks */,
+				E44D35D9287521EA0076EE0A /* FirebaseAuth in Frameworks */,
 				E4B974B228716AF10035A97B /* RxRelay in Frameworks */,
 				E4B974FC28719A8B0035A97B /* RxDataSources in Frameworks */,
+				E44D35E5287521EA0076EE0A /* FirebaseStorageCombine-Community in Frameworks */,
+				E44D35E1287521EA0076EE0A /* FirebaseFirestoreSwift in Frameworks */,
 				E4B974F6287170720035A97B /* OrderedCollections in Frameworks */,
 				E4B974B028716AF10035A97B /* RxCocoa in Frameworks */,
+				E44D35DF287521EA0076EE0A /* FirebaseFirestoreCombine-Community in Frameworks */,
+				E44D35E3287521EA0076EE0A /* FirebaseStorage in Frameworks */,
+				E44D35DD287521EA0076EE0A /* FirebaseFirestore in Frameworks */,
+				E44D35DB287521EA0076EE0A /* FirebaseAuthCombine-Community in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E44D35E628767BFC0076EE0A /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				E4B974BB28716B6F0035A97B /* BaseViewController.swift */,
+				E4B974BE28716B6F0035A97B /* MainTabBarController.swift */,
+				E4B974BC28716B6F0035A97B /* LoadingScreenViewController.swift */,
+				E44D35E728767C130076EE0A /* PickerViewController.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		E4B9744C287169E40035A97B = {
 			isa = PBXGroup;
 			children = (
@@ -220,6 +263,7 @@
 				E4B97461287169E50035A97B /* Assets.xcassets */,
 				E4B97463287169E50035A97B /* LaunchScreen.storyboard */,
 				E4B97466287169E50035A97B /* Info.plist */,
+				E4B975502874EA4D0035A97B /* GoogleService-Info.plist */,
 			);
 			path = "Why am I so poor";
 			sourceTree = "<group>";
@@ -291,6 +335,7 @@
 				E4B9748328716AC50035A97B /* UIColor+Theme.swift */,
 				E4B9748428716AC50035A97B /* UIFont+Theme.swift */,
 				E4B9748528716AC50035A97B /* Enum.swift */,
+				E4B97541287412B70035A97B /* Icons.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -329,13 +374,12 @@
 		E4B974B928716B6F0035A97B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				E4B974BB28716B6F0035A97B /* BaseViewController.swift */,
-				E4B974BE28716B6F0035A97B /* MainTabBarController.swift */,
-				E4B974BC28716B6F0035A97B /* LoadingScreenViewController.swift */,
+				E44D35E628767BFC0076EE0A /* Common */,
 				E4B974BD28716B6F0035A97B /* HomeViewController.swift */,
-				E4B975192871DF4C0035A97B /* TransactionDetailViewController.swift */,
-				E4B975252872900A0035A97B /* TransactionEditTextPropertyViewController.swift */,
 				E4B9751F2871E1D00035A97B /* TransactionListViewController.swift */,
+				E4B975192871DF4C0035A97B /* TransactionDetailViewController.swift */,
+				E4B97543287444900035A97B /* TransactionEditFieldViewController.swift */,
+				E4B9753D28740D490035A97B /* AddTransactionViewController.swift */,
 				E4B975082871D40F0035A97B /* BudgetViewController.swift */,
 				E4B9752F2872FBE50035A97B /* EditBudgetViewController.swift */,
 				E4B975272872F6140035A97B /* BudgetDetailViewController.swift */,
@@ -360,6 +404,7 @@
 				E4B974C628716B6F0035A97B /* InfoTextButton.swift */,
 				E4B9752B2872F68C0035A97B /* DetailHeaderView.swift */,
 				E4B97533287314D50035A97B /* UnderlinedTextField.swift */,
+				E4B975392873D0120035A97B /* IconTextButton.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -381,6 +426,7 @@
 				E4B975172871D9820035A97B /* Category.swift */,
 				E4B974E928716BBD0035A97B /* Transaction.swift */,
 				E4B9750C2871D4B30035A97B /* Budget.swift */,
+				E4B9753B28740A070035A97B /* Account.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -400,9 +446,11 @@
 		E4B974F7287173370035A97B /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				E4B975372873CB080035A97B /* BalanceView.swift */,
 				E4B974F8287173440035A97B /* TransactionPreviewCell.swift */,
 				E4B975042871ACFC0035A97B /* TransactionListHeaderView.swift */,
 				E4B97523287281A90035A97B /* TransactionDetailCell.swift */,
+				E4B9753F28740EFC0035A97B /* TransactionAmountCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -434,6 +482,7 @@
 				E4B974EE2871701D0035A97B /* TransactionListViewModel.swift */,
 				E4B9750228719DAF0035A97B /* TransactionCellViewModel.swift */,
 				E4B9751B2871DFB00035A97B /* TransactionViewModel.swift */,
+				E4B97545287445F30035A97B /* TransactionEditFieldViewModel.swift */,
 			);
 			path = Transaction;
 			sourceTree = "<group>";
@@ -472,6 +521,13 @@
 				E4B974F3287170720035A97B /* DequeModule */,
 				E4B974F5287170720035A97B /* OrderedCollections */,
 				E4B974FB28719A8B0035A97B /* RxDataSources */,
+				E44D35D8287521EA0076EE0A /* FirebaseAuth */,
+				E44D35DA287521EA0076EE0A /* FirebaseAuthCombine-Community */,
+				E44D35DC287521EA0076EE0A /* FirebaseFirestore */,
+				E44D35DE287521EA0076EE0A /* FirebaseFirestoreCombine-Community */,
+				E44D35E0287521EA0076EE0A /* FirebaseFirestoreSwift */,
+				E44D35E2287521EA0076EE0A /* FirebaseStorage */,
+				E44D35E4287521EA0076EE0A /* FirebaseStorageCombine-Community */,
 			);
 			productName = "Why am I so poor";
 			productReference = E4B97455287169E40035A97B /* Why am I so poor.app */;
@@ -506,6 +562,7 @@
 				E4B974B528716B000035A97B /* XCRemoteSwiftPackageReference "SnapKit" */,
 				E4B974F0287170720035A97B /* XCRemoteSwiftPackageReference "swift-collections" */,
 				E4B974FA28719A8B0035A97B /* XCRemoteSwiftPackageReference "RxDataSources" */,
+				E44D35D7287521EA0076EE0A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = E4B97456287169E40035A97B /* Products */;
 			projectDirPath = "";
@@ -526,6 +583,7 @@
 				E4B974D728716B8A0035A97B /* vi.strings in Resources */,
 				E4B97465287169E50035A97B /* LaunchScreen.storyboard in Resources */,
 				E4B97462287169E50035A97B /* Assets.xcassets in Resources */,
+				E4B975512874EA4D0035A97B /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -541,6 +599,7 @@
 				E4B974A328716AC50035A97B /* UIView+Extensions.swift in Sources */,
 				E4B975182871D9820035A97B /* Category.swift in Sources */,
 				E4B974A628716AC50035A97B /* Localized.swift in Sources */,
+				E4B9753C28740A070035A97B /* Account.swift in Sources */,
 				E4B974CB28716B6F0035A97B /* MainTabBarController.swift in Sources */,
 				E4B975072871D4010035A97B /* BudgetCoordinator.swift in Sources */,
 				E4B974C828716B6F0035A97B /* BaseViewController.swift in Sources */,
@@ -548,6 +607,7 @@
 				E4B975092871D40F0035A97B /* BudgetViewController.swift in Sources */,
 				E4B975112871D5BA0035A97B /* BudgetSection.swift in Sources */,
 				E4B974E628716BAD0035A97B /* HomeViewModel.swift in Sources */,
+				E4B97544287444900035A97B /* TransactionEditFieldViewController.swift in Sources */,
 				E4B9749E28716AC50035A97B /* UIFont+Theme.swift in Sources */,
 				E4B974CA28716B6F0035A97B /* HomeViewController.swift in Sources */,
 				E4B974AA28716AC50035A97B /* TimeInterval+Extensions.swift in Sources */,
@@ -559,6 +619,7 @@
 				E4B9749728716AC50035A97B /* CircleView.swift in Sources */,
 				E4B974AD28716AC50035A97B /* Double+Extensions.swift in Sources */,
 				E4B975162871D69B0035A97B /* BudgetViewModel.swift in Sources */,
+				E4B9754028740EFC0035A97B /* TransactionAmountCell.swift in Sources */,
 				E4B9749628716AC50035A97B /* RoundButton.swift in Sources */,
 				E4B9751A2871DF4C0035A97B /* TransactionDetailViewController.swift in Sources */,
 				E4B97524287281A90035A97B /* TransactionDetailCell.swift in Sources */,
@@ -573,6 +634,7 @@
 				E4B9752228725EEC0035A97B /* UINavigationController+Extensions.swift in Sources */,
 				E4B975202871E1D00035A97B /* TransactionListViewController.swift in Sources */,
 				E4B974A228716AC50035A97B /* UIImageView+loadImageUsingURL.swift in Sources */,
+				E44D35E828767C130076EE0A /* PickerViewController.swift in Sources */,
 				E4B9749928716AC50035A97B /* ProgressBarView.swift in Sources */,
 				E4B97459287169E40035A97B /* AppDelegate.swift in Sources */,
 				E4B9749828716AC50035A97B /* TextButton.swift in Sources */,
@@ -582,13 +644,14 @@
 				E4B974A028716AC50035A97B /* ViewController.swift in Sources */,
 				E4B97534287314D50035A97B /* UnderlinedTextField.swift in Sources */,
 				E4B974D028716B6F0035A97B /* InfoTextButton.swift in Sources */,
+				E4B9753A2873D0120035A97B /* IconTextButton.swift in Sources */,
 				E4B974A828716AC50035A97B /* Decimal+formatter.swift in Sources */,
 				E4B974AB28716AC50035A97B /* UILabel+Extensions.swift in Sources */,
 				E4B975322872FC5D0035A97B /* BudgetEditCell.swift in Sources */,
 				E4B9747328716AB50035A97B /* MeCoordinator.swift in Sources */,
 				E4B975302872FBE50035A97B /* EditBudgetViewController.swift in Sources */,
 				E4B9750B2871D4380035A97B /* BudgetListViewModel.swift in Sources */,
-				E4B975262872900A0035A97B /* TransactionEditTextPropertyViewController.swift in Sources */,
+				E4B975382873CB080035A97B /* BalanceView.swift in Sources */,
 				E4B974AC28716AC50035A97B /* Date+Extensions.swift in Sources */,
 				E4B974F9287173440035A97B /* TransactionPreviewCell.swift in Sources */,
 				E4B9749F28716AC50035A97B /* Enum.swift in Sources */,
@@ -600,11 +663,14 @@
 				E4B974A528716AC50035A97B /* String+Extensions.swift in Sources */,
 				E4B9750D2871D4B30035A97B /* Budget.swift in Sources */,
 				E4B9749A28716AC50035A97B /* SpinnerView.swift in Sources */,
+				E4B97542287412B70035A97B /* Icons.swift in Sources */,
+				E4B9753E28740D490035A97B /* AddTransactionViewController.swift in Sources */,
 				E4B974DF28716BA90035A97B /* AppTime.swift in Sources */,
 				E4B974A428716AC50035A97B /* DateFormatter+Extensions.swift in Sources */,
 				E4B9751C2871DFB00035A97B /* TransactionViewModel.swift in Sources */,
 				E4B9747428716AB50035A97B /* HomeCoordinator.swift in Sources */,
 				E4B974C928716B6F0035A97B /* LoadingScreenViewController.swift in Sources */,
+				E4B97546287445F30035A97B /* TransactionEditFieldViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -814,6 +880,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		E44D35D7287521EA0076EE0A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		E4B974AE28716AF10035A97B /* XCRemoteSwiftPackageReference "RxSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveX/RxSwift";
@@ -849,6 +923,41 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		E44D35D8287521EA0076EE0A /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E44D35D7287521EA0076EE0A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		E44D35DA287521EA0076EE0A /* FirebaseAuthCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E44D35D7287521EA0076EE0A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseAuthCombine-Community";
+		};
+		E44D35DC287521EA0076EE0A /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E44D35D7287521EA0076EE0A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		E44D35DE287521EA0076EE0A /* FirebaseFirestoreCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E44D35D7287521EA0076EE0A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreCombine-Community";
+		};
+		E44D35E0287521EA0076EE0A /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E44D35D7287521EA0076EE0A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		E44D35E2287521EA0076EE0A /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E44D35D7287521EA0076EE0A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		E44D35E4287521EA0076EE0A /* FirebaseStorageCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E44D35D7287521EA0076EE0A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseStorageCombine-Community";
+		};
 		E4B974AF28716AF10035A97B /* RxCocoa */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = E4B974AE28716AF10035A97B /* XCRemoteSwiftPackageReference "RxSwift" */;

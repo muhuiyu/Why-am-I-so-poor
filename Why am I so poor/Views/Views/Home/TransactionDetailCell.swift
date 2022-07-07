@@ -63,6 +63,7 @@ extension TransactionDetailCell {
         titleLabel.text = "default"
         contentView.addSubview(titleLabel)
         
+        iconView.contentMode = .scaleAspectFit
         iconView.tintColor = UIColor.brand.primary
         valueStack.addArrangedSubview(iconView)
         
@@ -83,7 +84,7 @@ extension TransactionDetailCell {
             make.top.leading.bottom.equalTo(contentView.layoutMarginsGuide)
         }
         iconView.snp.remakeConstraints { make in
-            make.size.equalTo(Constants.iconButtonSize.slight)
+            make.size.equalTo(Constants.iconButtonSize.trivial)
         }
         valueStack.snp.remakeConstraints { make in
             make.top.bottom.equalTo(titleLabel)

@@ -10,6 +10,7 @@
 "AppName" = "Why am I so poor";
 "Login" = "Đăng nhập";
 "Logout" = "Đăng xuất";
+"General.Save" = "Lưu";
 
 // MARK: - Main Tab Bar
 "MainTab.Home" = "Home";
@@ -26,14 +27,29 @@
 "Language.vi" = "Tiếng Việt";
 "Language.changeLanguage" = "Thay đổi ngôn ngữ";
 
+// MARK: - Home
+"Home.BalanceTitle" = "Monthly balance";
+"Home.AddTransaction" = "Add";
+"Home.Accounts" = "accounts";
+
 // MARK: - Transaction
+"TransactionDetail.TransactionDetail" = "Transaction Detail";
+"TransactionDetail.AddTransaction" = "Add Transaction";
 "TransactionList.RecentTransactions" = "Recent Transactions";
 "TransactionList.SeeAll" = "See All";
+"TransactionDetail.Amount" = "Amount";
+"TransactionDetail.EnterAmount" = "Enter amount";
+"TransactionDetail.Date" = "Date";
+"TransactionDetail.Category" = "Category";
+"TransactionDetail.AddCategory" = "Add category";
+"TransactionDetail.Merchant" = "Merchant";
+"TransactionDetail.AddMerchant" = "Add merchant";
+"TransactionDetail.PaymentBy" = "Payment by";
+"TransactionDetail.AddPaymentMethod" = "Add payment method";
+"TransactionDetail.Tag" = "Tag";
+"TransactionDetail.AddTag" = "Add tag";
 "TransactionDetail.Note" = "Note";
 "TransactionDetail.AddNote" = "Add note";
-"TransactionDetail.Category" = "Category";
-"TransactionDetail.PaymentBy" = "Payment by";
-"TransactionDetail.ExpenseTag" = "Tag";
 
 // MARK: - Budget
 "Budget.EditBudget" = "Edit";

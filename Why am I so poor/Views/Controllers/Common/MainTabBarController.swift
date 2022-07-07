@@ -78,17 +78,17 @@ enum TabBarCategory: Int, CaseIterable {
     
     var inactiveImageValue: UIImage? {
         switch self {
-        case .home: return UIImage(systemName: "dollarsign.circle")
-        case .budget: return UIImage(systemName: "plusminus.circle")
-        case .me: return UIImage(systemName: "person")
+        case .home: return Icons.get(.dollarsignCircle)
+        case .budget: return Icons.get(.plusminus)
+        case .me: return Icons.get(.person)
         }
     }
     
     var activeImageValue: UIImage? {
         switch self {
-        case .home: return UIImage(systemName: "dollarsign.circle.fill")
-        case .budget: return UIImage(systemName: "plusminus.circle.fill")
-        case .me: return UIImage(systemName: "person.fill")
+        case .home: return Icons.get(.dollarsignCircle, isFilled: true)
+        case .budget: return Icons.get(.plusminus, isFilled: true)
+        case .me: return Icons.get(.person, isFilled: true)
         }
     }
     

@@ -21,7 +21,7 @@ class TransactionViewModel {
     var displayPaymentMethodString: BehaviorRelay<String> = BehaviorRelay(value: "")
     var displayCategoryString: BehaviorRelay<String> = BehaviorRelay(value: "")
     var displayNoteString: BehaviorRelay<String> = BehaviorRelay(value: "")
-    var displayExpenseTagString: BehaviorRelay<String> = BehaviorRelay(value: "")
+    var displayTagString: BehaviorRelay<String> = BehaviorRelay(value: "")
     
     init() {
         transaction
@@ -35,13 +35,13 @@ class TransactionViewModel {
                     self.displayPaymentMethodString.accept(value.paymentBy.rawValue)
                     self.displayCategoryString.accept(value.category.name)
                     self.displayNoteString.accept(value.note)
-                    self.displayExpenseTagString.accept(value.tag.rawValue)
+                    self.displayTagString.accept(value.tag.rawValue)
                 }
             })
             .disposed(by: disposeBag)
     }
 }
-
+// MARK: - Update database
 extension TransactionViewModel {
     func updateTransaction() {
         guard let transaction = transaction.value else { return }
@@ -51,7 +51,6 @@ extension TransactionViewModel {
                 return
             case .failure(let error):
                 print(error)
-                // TODO: - how to handle?
             }
         }
     }

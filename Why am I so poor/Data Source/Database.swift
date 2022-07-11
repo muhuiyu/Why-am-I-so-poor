@@ -146,6 +146,12 @@ extension Database {
     }
     func updateData(of transaction: Transaction, completion: @escaping (VoidResult) -> Void) {
         // TODO: - update data
+        print("request to update transaction \(transaction.id)")
+        return
+    }
+    func updateData(at transactionId: String, _ field: Transaction.EditableFields, to value: String, completion: @escaping (VoidResult) -> Void) {
+        // TODO: - update data
+        print("request to update transaction \(transactionId) of \(field) to \(value)")
         return
     }
     func updateData(of budgets: [Budget]) {

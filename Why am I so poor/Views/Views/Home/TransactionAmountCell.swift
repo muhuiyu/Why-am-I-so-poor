@@ -13,6 +13,12 @@ class TransactionAmountCell: UITableViewCell {
     private let dollarSignLabel = UILabel()
     private let textField = UITextField()
     
+    var value: String? {
+        didSet {
+            textField.text = value
+        }
+    }
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         configureViews()

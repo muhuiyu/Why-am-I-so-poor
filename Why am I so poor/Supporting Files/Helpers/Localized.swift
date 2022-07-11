@@ -51,6 +51,7 @@ extension Localized {
     
     struct TransactionDetail {
         static var addTransaction: String { "TransactionDetail.AddTransaction".localized }
+        static var editTransaction: String { "TransactionDetail.EditTransaction".localized }
         static var transactionDetail: String { "TransactionDetail.TransactionDetail".localized }
         static var amount: String { "TransactionDetail.Amount".localized }
         static var enterAmount: String { "TransactionDetail.EnterAmount".localized }

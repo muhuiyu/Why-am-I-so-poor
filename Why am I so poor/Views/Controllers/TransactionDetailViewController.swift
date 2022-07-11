@@ -48,29 +48,29 @@ extension TransactionDetailViewController {
         categoryCell.title = Localized.TransactionDetail.category
         categoryCell.tapHandler = { [weak self] in
             guard let transaction = self?.viewModel.transaction.value else { return }
-            self?.homeCoordinator?.showEditTransactionOptionField(transaction, field: .category)
+            self?.homeCoordinator?.showEditTransactionFieldOptionList(transaction, field: .category)
         }
         
         paymentMethodCell.title = Localized.TransactionDetail.paymentBy
         paymentMethodCell.valueIcon = Icons.get(.creditcard, isFilled: true)
         paymentMethodCell.tapHandler = { [weak self] in
             guard let transaction = self?.viewModel.transaction.value else { return }
-            self?.homeCoordinator?.showEditTransactionOptionField(transaction, field: .paymentBy)
+            self?.homeCoordinator?.showEditTransactionFieldOptionList(transaction, field: .paymentBy)
         }
         
         tagCell.title = Localized.TransactionDetail.tag
         tagCell.valueIcon = Icons.get(.tag, isFilled: true)
         tagCell.tapHandler = { [weak self] in
             guard let transaction = self?.viewModel.transaction.value else { return }
-            self?.homeCoordinator?.showEditTransactionOptionField(transaction, field: .tag)
+            self?.homeCoordinator?.showEditTransactionFieldOptionList(transaction, field: .tag)
         }
         
         noteCell.title = Localized.TransactionDetail.note
         noteCell.value = Localized.TransactionDetail.addNote
         noteCell.valueIcon = Icons.get(.pencil)
         noteCell.tapHandler = { [weak self] in
-            guard let transaction = self?.viewModel.transaction.value else { return }
-            self?.homeCoordinator?.showEditTransactionOptionField(transaction, field: .note)
+//            guard let transaction = self?.viewModel.transaction.value else { return }
+//            self?.homeCoordinator?.showEditTransactionOptionField(transaction, field: .note)
         }
         
         // MARK: - TableView
@@ -141,10 +141,10 @@ extension TransactionDetailViewController {
             }
             .disposed(by: disposeBag)
 
-        viewModel.displayExpenseTagString
+        viewModel.displayTagString
             .asObservable()
             .subscribe { value in
-                
+                self.tagCell.value = value
             }
             .disposed(by: disposeBag)
 

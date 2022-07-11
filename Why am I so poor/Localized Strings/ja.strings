@@ -35,6 +35,7 @@
 // MARK: - Transaction Detail
 "TransactionDetail.TransactionDetail" = "Transaction Detail";
 "TransactionDetail.AddTransaction" = "Add Transaction";
+"TransactionDetail.EditTransaction" = "Edit Transaction";
 "TransactionList.RecentTransactions" = "最近のご利用";
 "TransactionList.SeeAll" = "全てを見る";
 "TransactionDetail.Amount" = "Amount";

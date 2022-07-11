@@ -7,54 +7,49 @@
 
 import UIKit
 
-//class TransactionEditFieldViewModel {
-//    
-//    private var options: [String] = []
-//    private var placeholder: String = ""
-//    
-//    private let transactionId: String
-//    private let field: Transaction.EditableFields
-//    
-//    init(transactionId: String, field: Transaction.EditableFields) {
-//        self.transactionId = transactionId
-//        self.field = field
-//        configureVariables()
-//    }
-//    
-//    var displayOptions: [String] {
-//        return options
-//    }
-//    var displayPlaceholder: String {
-//        return placeholder
-//    }
-//}
-//
-//extension TransactionEditFieldViewModel {
-//    private func configureVariables() {
-////        switch field {
-////        case .paymentBy:
-////            displayOptions = PaymentMethod.allCases
-////        case .date:
-////            // do something
-////        case .account:
-////            // do something
-////        case .merchant:
-////            displayOptions = Database.shared.getAllMerchants()
-////        case .amount:
-////            placeholder = Localized.TransactionDetail.enterAmount
-////        case .category:
-////            displayOptions = Category.allToString
-////        case .isRecurring:
-////            
-////        case .note:
-////            <#code#>
-////        case .tag:
-////            <#code#>
-////        }
-//    }
-//
-//    private func updateField(to value: Any) {
-//        
-//    }
-//}
-//
+class TransactionEditFieldViewModel {
+
+    var options: [String] = []
+    
+    private let transactionId: String
+    private let field: Transaction.EditableFields
+    private var selectedOption: String = ""
+
+    init(transactionId: String, field: Transaction.EditableFields) {
+        self.transactionId = transactionId
+        self.field = field
+        configureOptionsData()
+    }
+}
+
+extension TransactionEditFieldViewModel {
+    func didSelect(_ option: String) {
+        selectedOption = option
+    }
+    func updateField() {
+        Database.shared.updateData(at: transactionId, field, to: selectedOption) { result in
+            switch result {
+            case .success:
+                return
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+    private func configureOptionsData() {
+        switch field {
+        case .paymentBy:
+            options = PaymentMethod.allCases.map { $0.rawValue }
+        case .merchant:
+            options = Database.shared.getAllMerchants()
+        case .category:
+            options = Category.allToString
+        case .tag:
+            options = TransactionTag.allCases.map { $0.rawValue }
+        default:
+            // do something here
+            return
+        }
+    }
+}
+

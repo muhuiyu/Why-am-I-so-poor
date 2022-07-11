@@ -15,6 +15,7 @@
 		E44D35E3287521EA0076EE0A /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = E44D35E2287521EA0076EE0A /* FirebaseStorage */; };
 		E44D35E5287521EA0076EE0A /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = E44D35E4287521EA0076EE0A /* FirebaseStorageCombine-Community */; };
 		E44D35E828767C130076EE0A /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44D35E728767C130076EE0A /* PickerViewController.swift */; };
+		E44D35EA287AE9290076EE0A /* TransactionTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44D35E9287AE9290076EE0A /* TransactionTextFieldCell.swift */; };
 		E4B97459287169E40035A97B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B97458287169E40035A97B /* AppDelegate.swift */; };
 		E4B9745B287169E40035A97B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B9745A287169E40035A97B /* SceneDelegate.swift */; };
 		E4B97462287169E50035A97B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4B97461287169E50035A97B /* Assets.xcassets */; };
@@ -99,7 +100,7 @@
 		E4B975382873CB080035A97B /* BalanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B975372873CB080035A97B /* BalanceView.swift */; };
 		E4B9753A2873D0120035A97B /* IconTextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B975392873D0120035A97B /* IconTextButton.swift */; };
 		E4B9753C28740A070035A97B /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B9753B28740A070035A97B /* Account.swift */; };
-		E4B9753E28740D490035A97B /* AddTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B9753D28740D490035A97B /* AddTransactionViewController.swift */; };
+		E4B9753E28740D490035A97B /* EditTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B9753D28740D490035A97B /* EditTransactionViewController.swift */; };
 		E4B9754028740EFC0035A97B /* TransactionAmountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B9753F28740EFC0035A97B /* TransactionAmountCell.swift */; };
 		E4B97542287412B70035A97B /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B97541287412B70035A97B /* Icons.swift */; };
 		E4B97544287444900035A97B /* TransactionEditFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B97543287444900035A97B /* TransactionEditFieldViewController.swift */; };
@@ -109,6 +110,7 @@
 
 /* Begin PBXFileReference section */
 		E44D35E728767C130076EE0A /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
+		E44D35E9287AE9290076EE0A /* TransactionTextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTextFieldCell.swift; sourceTree = "<group>"; };
 		E4B97455287169E40035A97B /* Why am I so poor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Why am I so poor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4B97458287169E40035A97B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E4B9745A287169E40035A97B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -187,7 +189,7 @@
 		E4B975372873CB080035A97B /* BalanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceView.swift; sourceTree = "<group>"; };
 		E4B975392873D0120035A97B /* IconTextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconTextButton.swift; sourceTree = "<group>"; };
 		E4B9753B28740A070035A97B /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
-		E4B9753D28740D490035A97B /* AddTransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionViewController.swift; sourceTree = "<group>"; };
+		E4B9753D28740D490035A97B /* EditTransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTransactionViewController.swift; sourceTree = "<group>"; };
 		E4B9753F28740EFC0035A97B /* TransactionAmountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionAmountCell.swift; sourceTree = "<group>"; };
 		E4B97541287412B70035A97B /* Icons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icons.swift; sourceTree = "<group>"; };
 		E4B97543287444900035A97B /* TransactionEditFieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionEditFieldViewController.swift; sourceTree = "<group>"; };
@@ -379,7 +381,7 @@
 				E4B9751F2871E1D00035A97B /* TransactionListViewController.swift */,
 				E4B975192871DF4C0035A97B /* TransactionDetailViewController.swift */,
 				E4B97543287444900035A97B /* TransactionEditFieldViewController.swift */,
-				E4B9753D28740D490035A97B /* AddTransactionViewController.swift */,
+				E4B9753D28740D490035A97B /* EditTransactionViewController.swift */,
 				E4B975082871D40F0035A97B /* BudgetViewController.swift */,
 				E4B9752F2872FBE50035A97B /* EditBudgetViewController.swift */,
 				E4B975272872F6140035A97B /* BudgetDetailViewController.swift */,
@@ -451,6 +453,7 @@
 				E4B975042871ACFC0035A97B /* TransactionListHeaderView.swift */,
 				E4B97523287281A90035A97B /* TransactionDetailCell.swift */,
 				E4B9753F28740EFC0035A97B /* TransactionAmountCell.swift */,
+				E44D35E9287AE9290076EE0A /* TransactionTextFieldCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -604,6 +607,7 @@
 				E4B975072871D4010035A97B /* BudgetCoordinator.swift in Sources */,
 				E4B974C828716B6F0035A97B /* BaseViewController.swift in Sources */,
 				E4B974C728716B6F0035A97B /* MeViewController.swift in Sources */,
+				E44D35EA287AE9290076EE0A /* TransactionTextFieldCell.swift in Sources */,
 				E4B975092871D40F0035A97B /* BudgetViewController.swift in Sources */,
 				E4B975112871D5BA0035A97B /* BudgetSection.swift in Sources */,
 				E4B974E628716BAD0035A97B /* HomeViewModel.swift in Sources */,
@@ -664,7 +668,7 @@
 				E4B9750D2871D4B30035A97B /* Budget.swift in Sources */,
 				E4B9749A28716AC50035A97B /* SpinnerView.swift in Sources */,
 				E4B97542287412B70035A97B /* Icons.swift in Sources */,
-				E4B9753E28740D490035A97B /* AddTransactionViewController.swift in Sources */,
+				E4B9753E28740D490035A97B /* EditTransactionViewController.swift in Sources */,
 				E4B974DF28716BA90035A97B /* AppTime.swift in Sources */,
 				E4B974A428716AC50035A97B /* DateFormatter+Extensions.swift in Sources */,
 				E4B9751C2871DFB00035A97B /* TransactionViewModel.swift in Sources */,

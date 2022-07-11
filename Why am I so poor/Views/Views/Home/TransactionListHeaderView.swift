@@ -36,6 +36,7 @@ extension TransactionListHeaderView {
         moreButtonLabel.textAlignment = .right
         moreButtonLabel.font = UIFont.bodyHeavy
         moreButtonLabel.text = Localized.TransactionList.seeAll
+        moreButtonLabel.isUserInteractionEnabled = true
         addSubview(moreButtonLabel)
     }
     private func configureConstraints() {

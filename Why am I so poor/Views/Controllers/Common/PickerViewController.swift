@@ -11,10 +11,10 @@ class PickerViewController: BaseViewController {
     private let tableView = UITableView()
     
     private let options: [String]
-    private let title: String
+    private let text: String
     
-    init(title: String, options: [String]) {
-        self.title = title
+    init(text: String, options: [String]) {
+        self.text = text
         self.options = options
     }
     

@@ -1,5 +1,5 @@
 //
-//  AddTransactionViewController.swift
+//  EditTransactionViewController.swift
 //  Why am I so poor
 //
 //  Created by Mu Yu on 7/5/22.
@@ -9,7 +9,7 @@ import UIKit
 import RxSwift
 import Vision
 
-class AddTransactionViewController: BaseViewController {
+class EditTransactionViewController: BaseViewController {
     private let disposeBag = DisposeBag()
     
     // MARK: - TableView
@@ -35,6 +35,15 @@ class AddTransactionViewController: BaseViewController {
     
     var viewModel = TransactionViewModel()
     
+    private let mode: Mode
+    enum Mode {
+        case add
+        case edit
+    }
+    init(mode: EditTransactionViewController.Mode) {
+        self.mode = mode
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureViews()
@@ -44,11 +53,16 @@ class AddTransactionViewController: BaseViewController {
     }
 }
 // MARK: - View Config
-extension AddTransactionViewController {
+extension EditTransactionViewController {
     private func configureViews() {
-        navigationItem.setTitle(Localized.TransactionDetail.addTransaction)
         navigationItem.setBarButtonItem(at: .left, image: Icons.get(.xmark), target: self, action: #selector(didTapClose))
-        navigationItem.setBarButtonItem(at: .right, with: Localized.General.save, target: self, action: #selector(didTapSave))
+        switch mode {
+        case .add:
+            navigationItem.setTitle(Localized.TransactionDetail.addTransaction)
+            navigationItem.setBarButtonItem(at: .right, with: Localized.General.save, target: self, action: #selector(didTapAdd))
+        case .edit:
+            navigationItem.setTitle(Localized.TransactionDetail.editTransaction)
+        }
         
 //        amountCell
         
@@ -89,7 +103,6 @@ extension AddTransactionViewController {
         }
         
         tableView.dataSource = self
-        tableView.delegate = self
         tableView.allowsSelection = false
         tableView.register(TransactionAmountCell.self, forCellReuseIdentifier: TransactionAmountCell.reuseID)
         tableView.register(TransactionDetailCell.self, forCellReuseIdentifier: TransactionDetailCell.reuseID)
@@ -104,12 +117,65 @@ extension AddTransactionViewController {
         
     }
     private func configureSignals() {
+        viewModel.displayIcon
+            .asObservable()
+            .subscribe { value in
+                self.categoryCell.valueIcon = value
+            }
+            .disposed(by: disposeBag)
         
+        viewModel.displayDateString
+            .asObservable()
+            .subscribe { value in
+                self.dateCell.value = value
+            }
+            .disposed(by: disposeBag)
+
+        viewModel.displayMerchantString
+            .asObservable()
+            .subscribe { value in
+                self.merchantCell.value = value
+            }
+            .disposed(by: disposeBag)
+
+        viewModel.displayAmountString
+            .asObservable()
+            .subscribe { value in
+                self.amountCell.value = value
+            }
+            .disposed(by: disposeBag)
+
+        viewModel.displayPaymentMethodString
+            .asObservable()
+            .subscribe { value in
+                self.paymentMethodCell.value = value
+            }
+            .disposed(by: disposeBag)
+
+        viewModel.displayCategoryString
+            .asObservable()
+            .subscribe { value in
+                self.categoryCell.value = value
+            }
+            .disposed(by: disposeBag)
+
+        viewModel.displayNoteString
+            .asObservable()
+            .subscribe { value in
+                self.noteCell.value = value
+            }
+            .disposed(by: disposeBag)
+
+        viewModel.displayTagString
+            .asObservable()
+            .subscribe { value in
+                self.tagCell.value = value
+            }
+            .disposed(by: disposeBag)
     }
 }
-
 // MARK: - Data Source
-extension AddTransactionViewController: UITableViewDataSource {
+extension EditTransactionViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return cells.count
     }
@@ -117,31 +183,20 @@ extension AddTransactionViewController: UITableViewDataSource {
         return cells[indexPath.row]
     }
 }
-
-// MARK: - Delegate
-extension AddTransactionViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        defer {
-            tableView.deselectRow(at: indexPath, animated: true)
-        }
-        print(indexPath)
-    }
-}
-
 // MARK: - Navigation
-extension AddTransactionViewController {
+extension EditTransactionViewController {
     @objc
     private func didTapClose() {
         homeCoordinator?.dismissCurrentModal()
     }
     @objc
-    private func didTapSave() {
+    private func didTapAdd() {
         viewModel.updateTransaction()
         homeCoordinator?.dismissCurrentModal()
     }
     private func didRequestToEdit(_ field: Transaction.EditableFields) {
         if let transaction = viewModel.transaction.value {
-            homeCoordinator?.showEditTransactionField(transaction, field: field)
+            homeCoordinator?.showEditTransactionFieldOptionList(transaction, field: field)
         }
     }
 }

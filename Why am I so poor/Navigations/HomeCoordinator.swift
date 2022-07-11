@@ -31,6 +31,14 @@ class HomeCoordinator: Coordinator {
         
     }
     
+    private func present(_ viewController: UIViewController) {
+        if let presentedViewController = navigationController?.presentedViewController {
+            presentedViewController.present(viewController, animated: true)
+        } else {
+            navigationController?.present(viewController, animated: true)
+        }
+    }
+
     private func navigate(to destination: Destination, presentModally: Bool, options: ModalOptions? = nil) {
         guard let viewController = makeViewController(for: destination) else { return }
         if presentModally {
@@ -38,12 +46,12 @@ class HomeCoordinator: Coordinator {
                 viewController.modalPresentationStyle = options.modalPresentationStyle
                 viewController.isModalInPresentation = options.isModalInPresentation
                 if options.isEmbedInNavigationController {
-                    navigationController?.present(viewController.embedInNavgationController(), animated: true)
+                    present(viewController.embedInNavgationController())
                 } else {
-                    navigationController?.present(viewController, animated: true)
+                    present(viewController)
                 }
             } else {
-                navigationController?.present(viewController, animated: true)
+                present(viewController)
             }
         } else {
             navigationController?.pushViewController(viewController, animated: true)
@@ -68,25 +76,23 @@ class HomeCoordinator: Coordinator {
 // MARK: - ViewController List
 extension HomeCoordinator {
     private func makeViewController(for destination: Destination) -> ViewController? {
-        // TODO: - Configure Navigation Bar
-        
         switch destination {
         case .viewTransactionList:
             let viewController = TransactionListViewController()
             viewController.homeCoordinator = self
             return viewController
         case .viewTransactionDetail(let transaction):
-            let viewController = TransactionDetailViewController()
+            let viewController = EditTransactionViewController(mode: .edit)
             viewController.homeCoordinator = self
             viewController.viewModel.transaction.accept(transaction)
             return viewController
         case .editTransactionField(let transaction, let field):
-            let viewController = TransactionEditFieldViewController()
+            let viewModel = TransactionEditFieldViewModel(transactionId: transaction.id, field: field)
+            let viewController = TransactionEditFieldViewController(viewModel: viewModel)
             viewController.homeCoordinator = self
-            // TODO: - set viewModel value
             return viewController
         case .addTransaction:
-            let viewController = AddTransactionViewController()
+            let viewController = EditTransactionViewController(mode: .add)
             viewController.homeCoordinator = self
             return viewController
         case .editBudgets:
@@ -106,18 +112,24 @@ extension HomeCoordinator {
 // MARK: - Navigation
 extension HomeCoordinator {
     func dismissCurrentModal() {
-        navigationController?.dismiss(animated: true)
+        if let presentedViewController = navigationController?.presentedViewController {
+            presentedViewController.dismiss(animated: true)
+        } else {
+            navigationController?.dismiss(animated: true)
+        }
     }
     // MARK: - Transaction List
     func showTransactionList() {
         self.navigate(to: .viewTransactionList, presentModally: false)
     }
     func showTransactionDetail(_ transaction: Transaction) {
-        self.navigate(to: .viewTransactionDetail(transaction), presentModally: false)
+        let options = ModalOptions(isEmbedInNavigationController: true, isModalInPresentation: true)
+        self.navigate(to: .viewTransactionDetail(transaction), presentModally: true, options: options)
     }
     // MARK: - Edit Transaction List
     func showEditTransactionFieldOptionList(_ transaction: Transaction, field: Transaction.EditableFields) {
-        self.navigate(to: .editTransactionField(transaction, field), presentModally: false)
+        let options = ModalOptions(isEmbedInNavigationController: true, isModalInPresentation: true)
+        self.navigate(to: .editTransactionField(transaction, field), presentModally: true, options: options)
     }
     // MARK: - Add Transactions
     func showAddTransaction() {

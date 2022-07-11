@@ -145,9 +145,9 @@ extension Transaction: Codable {
 
 // MARK: - Enums
 enum TransactionTag: String, Codable, CaseIterable {
-    case smallBill = "smallBill"
-    case bigBill = "bigBill"
-    case dailyLiving = "dailyLiving"
+    case smallBill = "Small bill"
+    case bigBill = "Big bill"
+    case dailyLiving = "Daily living"
 }
 enum TransactionType: String, Codable, CaseIterable {
     case expense = "expense"
